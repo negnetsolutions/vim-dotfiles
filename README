@@ -1,0 +1,8 @@
+# Installation
+
+clone git://github.com/negnetsolutions/vim-dotfiles.git ~/.vim
+~/.vim/install.sh
+
+# Updates
+
+~/.vim/update_modules.sh
