@@ -76,3 +76,6 @@
 [submodule "bundle/sjbach-lusty"]
 	path = bundle/sjbach-lusty
 	url = https://github.com/sjbach/lusty.git
+[submodule "bundle/sjl-gundo"]
+	path = bundle/sjl-gundo
+	url = https://github.com/sjl/gundo.vim.git
