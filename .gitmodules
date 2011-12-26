@@ -31,3 +31,6 @@
 [submodule "bundle/godlygeek-tabular"]
 	path = bundle/godlygeek-tabular
 	url = https://github.com/godlygeek/tabular.git
+[submodule "bundle/int3-vim-extradite"]
+	path = bundle/int3-vim-extradite
+	url = https://github.com/int3/vim-extradite.git
