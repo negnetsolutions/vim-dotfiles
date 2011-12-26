@@ -55,3 +55,6 @@
 [submodule "bundle/mikefarmer-snipmate"]
 	path = bundle/mikefarmer-snipmate
 	url = https://github.com/mikefarmer/snipmate.vim.git
+[submodule "bundle/mileszs-ack"]
+	path = bundle/mileszs-ack
+	url = https://github.com/mileszs/ack.vim.git
