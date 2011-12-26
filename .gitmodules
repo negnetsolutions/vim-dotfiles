@@ -168,3 +168,6 @@
 [submodule "bundle/Lokaltog-vim-easymotion"]
 	path = bundle/Lokaltog-vim-easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
+[submodule "snippets"]
+	path = snippets
+	url = https://github.com/scrooloose/snipmate-snippets.git
