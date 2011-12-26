@@ -7,3 +7,6 @@
 [submodule "bundle/vim-scripts-fuzzyfinder"]
 	path = bundle/vim-scripts-fuzzyfinder
 	url = https://github.com/vim-scripts/FuzzyFinder.git
+[submodule "bundle/raimondi-pickacolor"]
+	path = bundle/raimondi-pickacolor
+	url = https://github.com/Raimondi/PickAColor.git
