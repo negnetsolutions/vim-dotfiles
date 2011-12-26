@@ -97,3 +97,21 @@
 [submodule "bundle/tomtom-tcomment_vim"]
 	path = bundle/tomtom-tcomment_vim
 	url = https://github.com/tomtom/tcomment_vim.git
+[submodule "bundle/tpope-vim-endwise"]
+	path = bundle/tpope-vim-endwise
+	url = https://github.com/tpope/vim-endwise.git
+[submodule "bundle/tpope-vim-fugitive"]
+	path = bundle/tpope-vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "bundle/tpope-vim-git"]
+	path = bundle/tpope-vim-git
+	url = https://github.com/tpope/vim-git.git
+[submodule "bundle/tpope-vim-repeat"]
+	path = bundle/tpope-vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
+[submodule "bundle/tpope-vim-surround"]
+	path = bundle/tpope-vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "bundle/tpope-vim-unimpaired"]
+	path = bundle/tpope-vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
