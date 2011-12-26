@@ -52,3 +52,6 @@
 [submodule "bundle/mattn-zencoding-vim"]
 	path = bundle/mattn-zencoding-vim
 	url = https://github.com/mattn/zencoding-vim.git
+[submodule "bundle/mikefarmer-snipmate"]
+	path = bundle/mikefarmer-snipmate
+	url = https://github.com/mikefarmer/snipmate.vim.git
