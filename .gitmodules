@@ -22,3 +22,6 @@
 [submodule "bundle/dterei-VimBookmarking"]
 	path = bundle/dterei-VimBookmarking
 	url = https://github.com/dterei/VimBookmarking.git
+[submodule "bundle/garbas-vim-showmarks"]
+	path = bundle/garbas-vim-showmarks
+	url = https://github.com/garbas/vim-showmarks.git
