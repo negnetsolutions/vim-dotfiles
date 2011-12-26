@@ -67,3 +67,9 @@
 [submodule "bundle/rson-vim-conque"]
 	path = bundle/rson-vim-conque
 	url = https://github.com/rson/vim-conque.git
+[submodule "bundle/scrooloose-nerdtree"]
+	path = bundle/scrooloose-nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "bundle/scrooloose-syntastic"]
+	path = bundle/scrooloose-syntastic
+	url = https://github.com/scrooloose/syntastic.git
