@@ -1,4 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Users/andy/Sites/Gradenet4.x'
-let g:netrw_dirhist_2='/Users/andy/Sites/Drupal/abersonexhibits.com/web/sites/all/themes/ABERSONEXHIBITS'
