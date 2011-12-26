@@ -58,3 +58,6 @@
 [submodule "bundle/mileszs-ack"]
 	path = bundle/mileszs-ack
 	url = https://github.com/mileszs/ack.vim.git
+[submodule "bundle/nelstrom-vim-markdown-preview"]
+	path = bundle/nelstrom-vim-markdown-preview
+	url = https://github.com/nelstrom/vim-markdown-preview.git
