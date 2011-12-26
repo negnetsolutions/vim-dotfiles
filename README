@@ -3,6 +3,6 @@
 clone git://github.com/negnetsolutions/vim-dotfiles.git ~/.vim
 ~/.vim/install.sh
 
-# Updates
+# Update all
 
-~/.vim/update_modules.sh
+~/.vim/update.sh
