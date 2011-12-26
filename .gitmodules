@@ -91,3 +91,6 @@
 [submodule "bundle/skwp-vim-indexed-search"]
 	path = bundle/skwp-vim-indexed-search
 	url = https://github.com/skwp/vim-indexed-search.git
+[submodule "bundle/tjennings-git-grep-vim"]
+	path = bundle/tjennings-git-grep-vim
+	url = https://github.com/tjennings/git-grep-vim.git
