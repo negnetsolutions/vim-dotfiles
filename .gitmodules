@@ -73,3 +73,6 @@
 [submodule "bundle/scrooloose-syntastic"]
 	path = bundle/scrooloose-syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/sjbach-lusty"]
+	path = bundle/sjbach-lusty
+	url = https://github.com/sjbach/lusty.git
