@@ -16,3 +16,6 @@
 [submodule "bundle/austintaylor-vim-indentobject"]
 	path = bundle/austintaylor-vim-indentobject
 	url = https://github.com/austintaylor/vim-indentobject.git
+[submodule "bundle/markabe-bufexplorer"]
+	path = bundle/markabe-bufexplorer
+	url = https://github.com/markabe/bufexplorer.git
