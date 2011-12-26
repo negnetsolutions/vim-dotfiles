@@ -94,3 +94,6 @@
 [submodule "bundle/tjennings-git-grep-vim"]
 	path = bundle/tjennings-git-grep-vim
 	url = https://github.com/tjennings/git-grep-vim.git
+[submodule "bundle/tomtom-tcomment_vim"]
+	path = bundle/tomtom-tcomment_vim
+	url = https://github.com/tomtom/tcomment_vim.git
