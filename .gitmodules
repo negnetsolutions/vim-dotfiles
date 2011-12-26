@@ -34,3 +34,6 @@
 [submodule "bundle/int3-vim-extradite"]
 	path = bundle/int3-vim-extradite
 	url = https://github.com/int3/vim-extradite.git
+[submodule "bundle/jistr-vim-nerdtree-tabs"]
+	path = bundle/jistr-vim-nerdtree-tabs
+	url = https://github.com/jistr/vim-nerdtree-tabs.git
