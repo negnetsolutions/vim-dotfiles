@@ -64,3 +64,6 @@
 [submodule "bundle/raimondi-delimitMate"]
 	path = bundle/raimondi-delimitMate
 	url = https://github.com/Raimondi/delimitMate.git
+[submodule "bundle/rson-vim-conque"]
+	path = bundle/rson-vim-conque
+	url = https://github.com/rson/vim-conque.git
