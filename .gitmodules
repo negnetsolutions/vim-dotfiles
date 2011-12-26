@@ -49,3 +49,6 @@
 [submodule "bundle/kogakure-vim-sparkup"]
 	path = bundle/kogakure-vim-sparkup
 	url = https://github.com/kogakure/vim-sparkup.git
+[submodule "bundle/mattn-zencoding-vim"]
+	path = bundle/mattn-zencoding-vim
+	url = https://github.com/mattn/zencoding-vim.git
