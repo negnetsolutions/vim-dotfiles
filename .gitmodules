@@ -10,3 +10,6 @@
 [submodule "bundle/raimondi-pickacolor"]
 	path = bundle/raimondi-pickacolor
 	url = https://github.com/Raimondi/PickAColor.git
+[submodule "bundle/Shougo-neocomplcache"]
+	path = bundle/Shougo-neocomplcache
+	url = https://github.com/Shougo/neocomplcache.git
