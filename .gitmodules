@@ -118,3 +118,30 @@
 [submodule "bundle/vim-scripts-l9"]
 	path = bundle/vim-scripts-l9
 	url = https://github.com/vim-scripts/L9.git
+[submodule "bundle/vim-scripts-AnsiEsc"]
+	path = bundle/vim-scripts-AnsiEsc
+	url = https://github.com/vim-scripts/AnsiEsc.vim.git
+[submodule "bundle/vim-scripts-AutoTag"]
+	path = bundle/vim-scripts-AutoTag
+	url = https://github.com/vim-scripts/AutoTag.git
+[submodule "bundle/vim-scripts-IndexedSearch"]
+	path = bundle/vim-scripts-IndexedSearch
+	url = https://github.com/vim-scripts/IndexedSearch.git
+[submodule "bundle/vim-scripts-ZoomWin"]
+	path = bundle/vim-scripts-ZoomWin
+	url = https://github.com/vim-scripts/ZoomWin.git
+[submodule "bundle/vim-scripts-argtextobj"]
+	path = bundle/vim-scripts-argtextobj
+	url = https://github.com/vim-scripts/argtextobj.vim.git
+[submodule "bundle/vim-scripts-lastpos"]
+	path = bundle/vim-scripts-lastpos
+	url = https://github.com/vim-scripts/lastpos.vim.git
+[submodule "bundle/tsaleh-matchit"]
+	path = bundle/tsaleh-matchit
+	url = https://github.com/tsaleh/vim-matchit.git
+[submodule "bundle/vim-scripts-sudo"]
+	path = bundle/vim-scripts-sudo
+	url = https://github.com/vim-scripts/sudo.vim.git
+[submodule "bundle/vim-scripts-taglist"]
+	path = bundle/vim-scripts-taglist
+	url = https://github.com/vim-scripts/taglist.vim.git
