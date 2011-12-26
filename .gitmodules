@@ -19,3 +19,6 @@
 [submodule "bundle/markabe-bufexplorer"]
 	path = bundle/markabe-bufexplorer
 	url = https://github.com/markabe/bufexplorer.git
+[submodule "bundle/dterei-VimBookmarking"]
+	path = bundle/dterei-VimBookmarking
+	url = https://github.com/dterei/VimBookmarking.git
