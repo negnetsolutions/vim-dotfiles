@@ -148,3 +148,6 @@
 [submodule "bundle/wincent-Command-T"]
 	path = bundle/wincent-Command-T
 	url = https://github.com/wincent/Command-T.git
+[submodule "bundle/Lokaltog-vim-easymotion"]
+	path = bundle/Lokaltog-vim-easymotion
+	url = https://github.com/Lokaltog/vim-easymotion.git
