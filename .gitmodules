@@ -61,3 +61,6 @@
 [submodule "bundle/nelstrom-vim-markdown-preview"]
 	path = bundle/nelstrom-vim-markdown-preview
 	url = https://github.com/nelstrom/vim-markdown-preview.git
+[submodule "bundle/raimondi-delimitMate"]
+	path = bundle/raimondi-delimitMate
+	url = https://github.com/Raimondi/delimitMate.git
