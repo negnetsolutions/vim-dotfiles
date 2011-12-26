@@ -145,3 +145,6 @@
 [submodule "bundle/vim-scripts-taglist"]
 	path = bundle/vim-scripts-taglist
 	url = https://github.com/vim-scripts/taglist.vim.git
+[submodule "bundle/wincent-Command-T"]
+	path = bundle/wincent-Command-T
+	url = https://github.com/wincent/Command-T.git
