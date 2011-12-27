@@ -5,4 +5,5 @@ clone git://github.com/negnetsolutions/vim-dotfiles.git ~/.vim
 
 # Update all
 
-~/.vim/update.sh
+cd ~/.vim
+./update.sh
