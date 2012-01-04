@@ -171,3 +171,6 @@
 [submodule "snippets"]
 	path = snippets
 	url = https://github.com/scrooloose/snipmate-snippets.git
+[submodule "bundle/chrismetcalf-vim-yankring"]
+	path = bundle/chrismetcalf-vim-yankring
+	url = git://github.com/chrismetcalf/vim-yankring.git

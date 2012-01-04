@@ -77,9 +77,10 @@ set list listchars=tab:\ \ ,trail:·
 
 " ================ Folds ============================
 
-set foldmethod=indent   "fold based on indent
-set foldnestmax=3       "deepest fold is 3 levels
-set nofoldenable        "dont fold by default
+set foldmethod=syntax " fold based on indent
+set foldnestmax=3     " deepest fold is 3 levels
+" set nofoldenable      " dont fold by default
+let javaScript_fold=1 " turn on javascript folding
 nnoremap <Space> za
 vnoremap <Space> za
 
@@ -101,9 +102,10 @@ au BufRead,BufNewFile *.scss set filetype=scss
 
 au BufRead,BufNewFile *.template set filetype=html
 au BufRead,BufNewFile *.page set filetype=markdown
+au BufRead,BufNewFile *.mks set filetype=markdown
 
-au BufNewFile,BufRead *.js setlocal foldmethod=marker
-au BufNewFile,BufRead *.js setlocal foldmarker={,}
+" au BufNewFile,BufRead *.js setlocal foldmethod=marker
+" au BufNewFile,BufRead *.js setlocal foldmarker={,}
 
 au BufNewFile,BufRead *.vim setlocal foldmethod=marker
 
