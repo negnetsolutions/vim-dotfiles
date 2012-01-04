@@ -95,9 +95,6 @@
 [submodule "bundle/skwp-vim-colors-solarized"]
 	path = bundle/skwp-vim-colors-solarized
 	url = https://github.com/skwp/vim-colors-solarized.git
-[submodule "bundle/skwp-vim-html-escape"]
-	path = bundle/skwp-vim-html-escape
-	url = https://github.com/skwp/vim-html-escape.git
 [submodule "bundle/skwp-vim-indexed-search"]
 	path = bundle/skwp-vim-indexed-search
 	url = https://github.com/skwp/vim-indexed-search.git
