@@ -12,9 +12,6 @@
   ignore = dirty
 	path = bundle/raimondi-pickacolor
 	url = https://github.com/Raimondi/PickAColor.git
-[submodule "bundle/Shougo-neocomplcache"]
-	path = bundle/Shougo-neocomplcache
-	url = https://github.com/Shougo/neocomplcache.git
 [submodule "bundle/austintaylor-vim-indentobject"]
 	path = bundle/austintaylor-vim-indentobject
 	url = https://github.com/austintaylor/vim-indentobject.git
@@ -171,3 +168,6 @@
 [submodule "bundle/chrismetcalf-vim-yankring"]
 	path = bundle/chrismetcalf-vim-yankring
 	url = git://github.com/chrismetcalf/vim-yankring.git
+[submodule "non-root-bundles/Shougo-neocomplache"]
+	path = non-root-bundles/Shougo-neocomplache
+	url = https://github.com/Shougo/neocomplcache.git

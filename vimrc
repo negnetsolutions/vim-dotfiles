@@ -8,6 +8,11 @@ set nocompatible
 
   runtime bundle/tpope-vim-pathogen/autoload/pathogen.vim
   call pathogen#infect()
+
+  if $SUDO_USER == ''
+    call pathogen#infect('non-root-bundles')
+  endif
+
   call pathogen#helptags()
 
 " ================ General Config ====================
