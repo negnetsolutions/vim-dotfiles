@@ -171,3 +171,7 @@
 [submodule "non-root-bundles/Shougo-neocomplache"]
 	path = non-root-bundles/Shougo-neocomplache
 	url = https://github.com/Shougo/neocomplcache.git
+[submodule "bundle/sickill-vim-pasta"]
+  ignore = dirty
+	path = bundle/sickill-vim-pasta
+	url = https://github.com/sickill/vim-pasta.git
