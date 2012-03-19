@@ -23,9 +23,6 @@
   ignore = dirty
 	path = bundle/dterei-VimBookmarking
 	url = https://github.com/dterei/VimBookmarking.git
-[submodule "bundle/garbas-vim-showmarks"]
-	path = bundle/garbas-vim-showmarks
-	url = https://github.com/garbas/vim-showmarks.git
 [submodule "bundle/goglygeek-csapprox"]
 	path = bundle/goglygeek-csapprox
 	url = https://github.com/godlygeek/csapprox.git
@@ -175,3 +172,6 @@
   ignore = dirty
 	path = bundle/sickill-vim-pasta
 	url = https://github.com/sickill/vim-pasta.git
+[submodule "bundle/zakj-vim-showmarks"]
+	path = bundle/zakj-vim-showmarks
+	url = https://github.com/zakj/vim-showmarks.git
