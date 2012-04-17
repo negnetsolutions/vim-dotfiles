@@ -1,7 +1,7 @@
 " Don't use the PHP syntax folding 
-" setlocal foldmethod=manual 
+setlocal foldmethod=manual 
 " Turn on PHP fast folds 
-EnableFastPHPFolds 
+" EnableFastPHPFolds 
 
 au FileType php set omnifunc=phpcomplete#CompletePHP
 let php_sql_query=1

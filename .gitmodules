@@ -4,10 +4,6 @@
 [submodule "bundle/AndrewRadev-splitjoin"]
 	path = bundle/AndrewRadev-splitjoin
 	url = https://github.com/AndrewRadev/splitjoin.vim.git
-[submodule "bundle/vim-scripts-fuzzyfinder"]
-  ignore = dirty
-	path = bundle/vim-scripts-fuzzyfinder
-	url = https://github.com/vim-scripts/FuzzyFinder.git
 [submodule "bundle/raimondi-pickacolor"]
   ignore = dirty
 	path = bundle/raimondi-pickacolor
@@ -19,66 +15,25 @@
   ignore = dirty
 	path = bundle/markabe-bufexplorer
 	url = https://github.com/markabe/bufexplorer.git
-[submodule "bundle/dterei-VimBookmarking"]
-  ignore = dirty
-	path = bundle/dterei-VimBookmarking
-	url = https://github.com/dterei/VimBookmarking.git
 [submodule "bundle/goglygeek-csapprox"]
 	path = bundle/goglygeek-csapprox
 	url = https://github.com/godlygeek/csapprox.git
 [submodule "bundle/godlygeek-tabular"]
 	path = bundle/godlygeek-tabular
 	url = https://github.com/godlygeek/tabular.git
-[submodule "bundle/int3-vim-extradite"]
-	path = bundle/int3-vim-extradite
-	url = https://github.com/int3/vim-extradite.git
-[submodule "bundle/jistr-vim-nerdtree-tabs"]
-	path = bundle/jistr-vim-nerdtree-tabs
-	url = https://github.com/jistr/vim-nerdtree-tabs.git
-[submodule "bundle/kana-vim-textobj-datetime"]
-  ignore = dirty
-	path = bundle/kana-vim-textobj-datetime
-	url = https://github.com/kana/vim-textobj-datetime.git
-[submodule "bundle/kana-vim-textobj-entire"]
-  ignore = dirty
-	path = bundle/kana-vim-textobj-entire
-	url = https://github.com/kana/vim-textobj-entire.git
-[submodule "bundle/kana-vim-textobj-user"]
-  ignore = dirty
-	path = bundle/kana-vim-textobj-user
-	url = https://github.com/kana/vim-textobj-user.git
 [submodule "bundle/kogakure-vim-sparkup"]
 	path = bundle/kogakure-vim-sparkup
 	url = https://github.com/kogakure/vim-sparkup.git
-[submodule "bundle/mattn-zencoding-vim"]
-	path = bundle/mattn-zencoding-vim
-	url = https://github.com/mattn/zencoding-vim.git
 [submodule "bundle/mikefarmer-snipmate"]
   ignore = dirty
 	path = bundle/mikefarmer-snipmate
 	url = https://github.com/mikefarmer/snipmate.vim.git
-[submodule "bundle/mileszs-ack"]
-	path = bundle/mileszs-ack
-	url = https://github.com/mileszs/ack.vim.git
-[submodule "bundle/nelstrom-vim-markdown-preview"]
-	path = bundle/nelstrom-vim-markdown-preview
-	url = https://github.com/nelstrom/vim-markdown-preview.git
 [submodule "bundle/raimondi-delimitMate"]
 	path = bundle/raimondi-delimitMate
 	url = https://github.com/Raimondi/delimitMate.git
-[submodule "bundle/rson-vim-conque"]
-  ignore = dirty
-	path = bundle/rson-vim-conque
-	url = https://github.com/rson/vim-conque.git
-[submodule "bundle/scrooloose-nerdtree"]
-	path = bundle/scrooloose-nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
 [submodule "bundle/scrooloose-syntastic"]
 	path = bundle/scrooloose-syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule "bundle/sjbach-lusty"]
-	path = bundle/sjbach-lusty
-	url = https://github.com/sjbach/lusty.git
 [submodule "bundle/sjl-gundo"]
 	path = bundle/sjl-gundo
 	url = https://github.com/sjl/gundo.vim.git
@@ -92,22 +47,12 @@
 [submodule "bundle/skwp-vim-indexed-search"]
 	path = bundle/skwp-vim-indexed-search
 	url = https://github.com/skwp/vim-indexed-search.git
-[submodule "bundle/tjennings-git-grep-vim"]
-	path = bundle/tjennings-git-grep-vim
-	url = https://github.com/tjennings/git-grep-vim.git
 [submodule "bundle/tomtom-tcomment_vim"]
 	path = bundle/tomtom-tcomment_vim
 	url = https://github.com/tomtom/tcomment_vim.git
 [submodule "bundle/tpope-vim-endwise"]
 	path = bundle/tpope-vim-endwise
 	url = https://github.com/tpope/vim-endwise.git
-[submodule "bundle/tpope-vim-fugitive"]
-	path = bundle/tpope-vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
-[submodule "bundle/tpope-vim-git"]
-  ignore = dirty
-	path = bundle/tpope-vim-git
-	url = https://github.com/tpope/vim-git.git
 [submodule "bundle/tpope-vim-repeat"]
 	path = bundle/tpope-vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
@@ -129,9 +74,6 @@
 [submodule "bundle/vim-scripts-AutoTag"]
 	path = bundle/vim-scripts-AutoTag
 	url = https://github.com/vim-scripts/AutoTag.git
-[submodule "bundle/vim-scripts-IndexedSearch"]
-	path = bundle/vim-scripts-IndexedSearch
-	url = https://github.com/vim-scripts/IndexedSearch.git
 [submodule "bundle/vim-scripts-ZoomWin"]
   ignore = dirty
 	path = bundle/vim-scripts-ZoomWin
@@ -149,16 +91,9 @@
 [submodule "bundle/vim-scripts-sudo"]
 	path = bundle/vim-scripts-sudo
 	url = https://github.com/vim-scripts/sudo.vim.git
-[submodule "bundle/vim-scripts-taglist"]
-  ignore = dirty
-	path = bundle/vim-scripts-taglist
-	url = https://github.com/vim-scripts/taglist.vim.git
 [submodule "bundle/wincent-Command-T"]
 	path = bundle/wincent-Command-T
 	url = https://github.com/wincent/Command-T.git
-[submodule "bundle/Lokaltog-vim-easymotion"]
-	path = bundle/Lokaltog-vim-easymotion
-	url = https://github.com/Lokaltog/vim-easymotion.git
 [submodule "snippets"]
 	path = snippets
 	url = https://github.com/scrooloose/snipmate-snippets.git
@@ -178,3 +113,6 @@
 [submodule "bundle/vim-scripts-phpfolding"]
 	path = bundle/vim-scripts-phpfolding
 	url = https://github.com/vim-scripts/phpfolding.vim.git
+[submodule "bundle/shawncplus-phpcomplete"]
+	path = bundle/shawncplus-phpcomplete
+	url = https://github.com/shawncplus/phpcomplete.vim.git
