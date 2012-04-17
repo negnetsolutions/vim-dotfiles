@@ -16,9 +16,11 @@ if has("gui_running")
   set columns=190
 
   " set guifont=Inconsolata:h20,Monaco:h17
-  set guifont=DejaVu\ Sans\ Mono:h12
-  
-  set colorcolumn=0
+  " set guifont=DejaVu\ Sans\ Mono:h12
+  set guifont=Menlo:h13
+
+  " sej colorcolumn=0
+
 else
   "dont load csapprox if we no gui support - silences an annoying warning
   let g:CSApprox_loaded = 1
