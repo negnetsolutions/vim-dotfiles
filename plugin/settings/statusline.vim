@@ -34,7 +34,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline=%#DiffAdd#
 set statusline+=%f\  
 set statusline+=%#LineNr# "switch to colors used for line number
-set statusline+=%{fugitive#statusline()}
+" set statusline+=%{fugitive#statusline()}
 set statusline+=%#DiffAdd#  "switch back to normal
 set statusline+=%=      "left/right separator
 set statusline+=%m      "modified flag
