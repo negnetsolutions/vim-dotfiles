@@ -6,4 +6,6 @@ git submodule foreach git pull origin master
 # update command-t
 cd bundle/wincent-Command-T
 rake make
+cd ../othree-html5
+make install
 cd ../..

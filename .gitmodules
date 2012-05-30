@@ -117,5 +117,15 @@
 	path = bundle/shawncplus-phpcomplete
 	url = https://github.com/shawncplus/phpcomplete.vim.git
 [submodule "bundle/vim-scripts-fuzzyfinder"]
+  ignore = dirty
 	path = bundle/vim-scripts-fuzzyfinder
 	url = https://github.com/vim-scripts/FuzzyFinder.git
+[submodule "bundle/tpope-vim-haml"]
+	path = bundle/tpope-vim-haml
+	url = https://github.com/tpope/vim-haml.git
+[submodule "bundle/tpope-vim-markdown"]
+	path = bundle/tpope-vim-markdown
+	url = https://github.com/tpope/vim-markdown.git
+[submodule "bundle/othree-html5"]
+	path = bundle/othree-html5
+	url = https://github.com/othree/html5.vim.git
