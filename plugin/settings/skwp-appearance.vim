@@ -17,7 +17,8 @@ if has("gui_running")
 
   " set guifont=Inconsolata:h20,Monaco:h17
   " set guifont=DejaVu\ Sans\ Mono:h12
-  set guifont=Menlo:h13
+  " set guifont=Menlo:h13
+  set guifont=Source\ Code\ Pro:h13
 
   " sej colorcolumn=0
 
@@ -27,4 +28,12 @@ else
   let g:solarized_termtrans=1
   let g:solarized_termcolors=16
 endif
+
+let g:Powerline_symbols = 'fancy'
+" set t_Co=256
+set nocompatible   " Disable vi-compatibility
+set laststatus=2   " Always show the statusline
+set encoding=utf-8 " Necessary to show Unicode glyphs
+" let g:Powerline_theme = 'skwp'
+let g:Powerline_colorscheme = 'skwp'
 

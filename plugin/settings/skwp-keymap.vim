@@ -200,3 +200,10 @@ endif
 " ============================
 inoremap <s-cr> <esc>A<cr>
 inoremap <D-cr> <esc>A;<cr>
+
+" Yank text to the OSX Clipboard
+noremap <leader>y "*y
+noremap <leader>yy "*Y
+
+" Preserve indentation while pasting text from the OS X clipboard
+noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>

@@ -129,3 +129,12 @@
 [submodule "bundle/othree-html5"]
 	path = bundle/othree-html5
 	url = https://github.com/othree/html5.vim.git
+[submodule "bundle/b4winckler-vim-angry"]
+	path = bundle/b4winckler-vim-angry
+	url = https://github.com/b4winckler/vim-angry.git
+[submodule "bundle/lokaltog-vim-powerline"]
+	path = bundle/lokaltog-vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
+[submodule "bundle/tpope-vim-fugitive"]
+	path = bundle/tpope-vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
