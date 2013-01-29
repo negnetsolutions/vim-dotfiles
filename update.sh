@@ -6,8 +6,10 @@ git submodule foreach git pull origin master
 git submodule update
 
 # update command-t
-cd bundle/wincent-Command-T
-rake make
+# cd bundle/wincent-Command-T
+# rake make
+
+# update html5
 cd ../othree-html5
 make install
 cd ../..

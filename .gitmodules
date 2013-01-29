@@ -91,9 +91,9 @@
 [submodule "bundle/vim-scripts-sudo"]
 	path = bundle/vim-scripts-sudo
 	url = https://github.com/vim-scripts/sudo.vim.git
-[submodule "bundle/wincent-Command-T"]
-	path = bundle/wincent-Command-T
-	url = https://github.com/wincent/Command-T.git
+; [submodule "bundle/wincent-Command-T"]
+; 	path = bundle/wincent-Command-T
+; 	url = https://github.com/wincent/Command-T.git
 [submodule "snippets"]
 	path = snippets
 	url = https://github.com/scrooloose/snipmate-snippets.git
@@ -110,12 +110,12 @@
 [submodule "bundle/zakj-vim-showmarks"]
 	path = bundle/zakj-vim-showmarks
 	url = https://github.com/zakj/vim-showmarks.git
-[submodule "bundle/vim-scripts-phpfolding"]
-	path = bundle/vim-scripts-phpfolding
-	url = https://github.com/vim-scripts/phpfolding.vim.git
-[submodule "bundle/shawncplus-phpcomplete"]
-	path = bundle/shawncplus-phpcomplete
-	url = https://github.com/shawncplus/phpcomplete.vim.git
+; [submodule "bundle/vim-scripts-phpfolding"]
+; 	path = bundle/vim-scripts-phpfolding
+; 	url = https://github.com/vim-scripts/phpfolding.vim.git
+; [submodule "bundle/shawncplus-phpcomplete"]
+; 	path = bundle/shawncplus-phpcomplete
+; 	url = https://github.com/shawncplus/phpcomplete.vim.git
 [submodule "bundle/vim-scripts-fuzzyfinder"]
   ignore = dirty
 	path = bundle/vim-scripts-fuzzyfinder
@@ -138,3 +138,12 @@
 [submodule "bundle/tpope-vim-fugitive"]
 	path = bundle/tpope-vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "bundle/spf13-PIV"]
+	path = bundle/spf13-PIV
+	url = git://github.com/spf13/PIV.git
+[submodule "bundle/kien-ctrlp"]
+	path = bundle/kien-ctrlp
+	url = git://github.com/kien/ctrlp.vim.git
+; [submodule "bundle/myusuf3-numbers"]
+; 	path = bundle/myusuf3-numbers
+; 	url = git://github.com/myusuf3/numbers.vim.git

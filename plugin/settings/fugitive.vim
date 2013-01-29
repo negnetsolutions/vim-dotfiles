@@ -1,0 +1,2 @@
+
+map ,gs :Gstatus<cr>
