@@ -26,6 +26,9 @@ set gcr=a:blinkon0              "Disable cursor blink
 
 set autoread                    "Reload files changed outside vim
 
+set spell                       "Enable Spelling
+
+
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window. 
 " http://items.sjbach.com/319/configuring-vim-right
@@ -92,6 +95,7 @@ vnoremap <Space> za
 " ================ Completion =======================
 
 set wildmode=list:longest
+
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
 
