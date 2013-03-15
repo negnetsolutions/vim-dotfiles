@@ -9,6 +9,8 @@ git submodule update
 # cd bundle/wincent-Command-T
 # rake make
 
+cd bundle
+
 # update html5
 cd ../othree-html5
 make install
