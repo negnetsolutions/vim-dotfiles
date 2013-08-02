@@ -1,13 +1,13 @@
 #!/bin/bash
 
-git pull origin master
+cd ~
+ln -s ~/.vim/vimrc ~/.vimrc
+cd ~/.vim
 git submodule init
-git submodule foreach git pull origin master
 git submodule update
 
+# update command-t
 cd bundle
-
-# update html5
 cd othree-html5
 make install
-cd ../..
+cd ~/.vim

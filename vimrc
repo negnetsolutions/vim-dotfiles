@@ -10,7 +10,7 @@ set nocompatible
   call pathogen#infect()
 
   if $SUDO_USER == ''
-    call pathogen#infect('non-root-bundles')
+    call pathogen#infect('non-root-bundles/{}')
   endif
 
   call pathogen#helptags()
