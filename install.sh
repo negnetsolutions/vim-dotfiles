@@ -7,8 +7,6 @@ git submodule init
 git submodule update
 
 # update command-t
-cd bundle/wincent-Command-T
-rake make
-cd ../othree-html5
+cd bundle/othree-html5
 make install
 cd ~/.vim
