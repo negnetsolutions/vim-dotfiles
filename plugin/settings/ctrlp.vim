@@ -3,7 +3,7 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_map = ',t'
 
 let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\.git$\|\.hg$\|\.svn$',
+      \ 'dir':  '\.git$\|\.hg$\|\.svn$\|vendor\/symfony$',
       \ 'file': '\.exe$\|\.so$\|\.dll$' }
 
 " let g:ctrlp_user_command = {
@@ -13,3 +13,5 @@ let g:ctrlp_custom_ignore = {
 "       \ },
 "       \ 'fallback': 'find %s -type f'
 "       \ }
+
+let g:ctrlp_root_markers = ['.git/']
