@@ -21,9 +21,6 @@
 [submodule "bundle/godlygeek-tabular"]
 	path = bundle/godlygeek-tabular
 	url = https://github.com/godlygeek/tabular.git
-[submodule "bundle/kogakure-vim-sparkup"]
-	path = bundle/kogakure-vim-sparkup
-	url = https://github.com/kogakure/vim-sparkup.git
 [submodule "bundle/mikefarmer-snipmate"]
   ignore = dirty
 	path = bundle/mikefarmer-snipmate
@@ -147,3 +144,6 @@
 ; [submodule "bundle/myusuf3-numbers"]
 ; 	path = bundle/myusuf3-numbers
 ; 	url = git://github.com/myusuf3/numbers.vim.git
+[submodule "bundle/tristen-vim-sparkup"]
+	path = bundle/tristen-vim-sparkup
+	url = https://github.com/tristen/vim-sparkup.git
