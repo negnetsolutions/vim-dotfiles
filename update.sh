@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git pull origin master
+git pull origin `git branch | sed -n '/\* /s///p'`
 git submodule init
 git submodule foreach git pull origin master
 git submodule update
