@@ -113,10 +113,6 @@
 ; [submodule "bundle/shawncplus-phpcomplete"]
 ; 	path = bundle/shawncplus-phpcomplete
 ; 	url = https://github.com/shawncplus/phpcomplete.vim.git
-[submodule "bundle/vim-scripts-fuzzyfinder"]
-  ignore = dirty
-	path = bundle/vim-scripts-fuzzyfinder
-	url = https://github.com/vim-scripts/FuzzyFinder.git
 [submodule "bundle/tpope-vim-haml"]
 	path = bundle/tpope-vim-haml
 	url = https://github.com/tpope/vim-haml.git
@@ -129,9 +125,6 @@
 [submodule "bundle/b4winckler-vim-angry"]
 	path = bundle/b4winckler-vim-angry
 	url = https://github.com/b4winckler/vim-angry.git
-[submodule "bundle/lokaltog-vim-powerline"]
-	path = bundle/lokaltog-vim-powerline
-	url = https://github.com/Lokaltog/vim-powerline.git
 [submodule "bundle/tpope-vim-fugitive"]
 	path = bundle/tpope-vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
@@ -147,3 +140,9 @@
 [submodule "bundle/tristen-vim-sparkup"]
 	path = bundle/tristen-vim-sparkup
 	url = https://github.com/tristen/vim-sparkup.git
+[submodule "bundle/bling-vim-airline"]
+	path = bundle/bling-vim-airline
+	url = https://github.com/bling/vim-airline.git
+[submodule "bundle/mhinz-vim-signifiy"]
+	path = bundle/mhinz-vim-signifiy
+	url = https://github.com/mhinz/vim-signify.git
