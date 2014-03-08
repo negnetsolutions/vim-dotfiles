@@ -27,6 +27,9 @@ else
   let g:CSApprox_loaded = 1
   let g:solarized_termtrans=1
   let g:solarized_termcolors=16
+  set mouse=a
+  set ttymouse=xterm2
+  set ttyfast
 endif
 
 " let g:Powerline_symbols = 'fancy'

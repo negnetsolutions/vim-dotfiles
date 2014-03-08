@@ -146,3 +146,9 @@
 [submodule "bundle/mhinz-vim-signifiy"]
 	path = bundle/mhinz-vim-signifiy
 	url = https://github.com/mhinz/vim-signify.git
+[submodule "bundle/vim-easymotion"]
+	path = bundle/vim-easymotion
+	url = https://github.com/Lokaltog/vim-easymotion.git
+[submodule "bundle/ap-vim-css-color"]
+	path = bundle/ap-vim-css-color
+	url = https://github.com/ap/vim-css-color.git

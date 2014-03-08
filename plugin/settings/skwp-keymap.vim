@@ -186,13 +186,6 @@ nmap ,bc :ClearBookmarks<cr>
 " abbr pry! require 'pry'; binding.pry 
 
 " ============================
-" Pick A Color
-" ============================
-if has("gui_macvim")
-	noremap <leader>cc <ESC>:PickHEX<CR>
-endif
-
-" ============================
 " Skipreturn
 " ============================
 inoremap <s-cr> <esc>A<cr>
