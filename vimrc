@@ -30,7 +30,7 @@ set spell                       "Enable Spelling
 
 
 " This makes vim act like all other editors, buffers can
-" exist in the background without being in a window. 
+" exist in the background without being in a window.
 " http://items.sjbach.com/319/configuring-vim-right
 set hidden
 
@@ -89,8 +89,8 @@ set foldmethod=syntax " fold based on indent
 set foldnestmax=3     " deepest fold is 3 levels
 " set nofoldenable      " dont fold by default
 let javaScript_fold=1 " turn on javascript folding
-nnoremap <Space> za
-vnoremap <Space> za
+nnoremap <Space> zA
+vnoremap <Space> zA
 
 " ================ Completion =======================
 
