@@ -90,9 +90,6 @@
 [submodule "snippets"]
 	path = snippets
 	url = https://github.com/scrooloose/snipmate-snippets.git
-[submodule "bundle/chrismetcalf-vim-yankring"]
-	path = bundle/chrismetcalf-vim-yankring
-	url = git://github.com/chrismetcalf/vim-yankring.git
 [submodule "non-root-bundles/Shougo-neocomplache"]
 	path = non-root-bundles/Shougo-neocomplache
 	url = https://github.com/Shougo/neocomplcache.git
@@ -148,3 +145,6 @@
 [submodule "bundle/ap-vim-css-color"]
 	path = bundle/ap-vim-css-color
 	url = https://github.com/ap/vim-css-color.git
+[submodule "bundle/vim-scripts-yankring"]
+	path = bundle/vim-scripts-yankring
+	url = https://github.com/vim-scripts/YankRing.vim.git
