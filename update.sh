@@ -1,9 +1,10 @@
 #!/bin/bash
 
 git pull origin `git branch | sed -n '/\* /s///p'`
-git submodule init
+git submodule sync
+git submodule update --init --recursive --rebase
 git submodule foreach git pull origin master
-git submodule update
+# git submodule update
 
 cd bundle
 
