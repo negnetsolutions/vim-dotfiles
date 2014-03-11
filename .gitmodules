@@ -81,10 +81,6 @@
 [submodule "bundle/vim-scripts-lastpos"]
 	path = bundle/vim-scripts-lastpos
 	url = https://github.com/vim-scripts/lastpos.vim.git
-[submodule "bundle/tsaleh-matchit"]
-  ignore = dirty
-	path = bundle/tsaleh-matchit
-	url = https://github.com/tsaleh/vim-matchit.git
 [submodule "bundle/vim-scripts-sudo"]
 	path = bundle/vim-scripts-sudo
 	url = https://github.com/vim-scripts/sudo.vim.git
