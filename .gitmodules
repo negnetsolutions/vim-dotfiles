@@ -146,5 +146,6 @@
 	path = bundle/ap-vim-css-color
 	url = https://github.com/ap/vim-css-color.git
 [submodule "bundle/vim-scripts-yankring"]
+  ignore = dirty
 	path = bundle/vim-scripts-yankring
 	url = https://github.com/vim-scripts/YankRing.vim.git
