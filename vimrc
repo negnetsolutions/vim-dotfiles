@@ -80,7 +80,7 @@ filetype indent on
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
 
-" set nowrap       "Don't wrap lines
+set nowrap       "Don't wrap lines
 " set linebreak    "Wrap lines at convenient points
 
 " ================ Folds ============================
@@ -138,5 +138,5 @@ if has("autocmd")
 endif
 
 " =========== Clipboard
-set clipboard=unnamed
+" set clipboard=unnamed
 nnoremap <silent> <F11> :YRShow<CR>
