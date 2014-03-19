@@ -137,6 +137,11 @@ if has("autocmd")
     \| exe "normal g'\"" | endif
 endif
 
+" =============== Special Maps =====================
+
+" Map F5 to remove trailing whitespace
+:nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+
 " =========== Clipboard
 " set clipboard=unnamed
 nnoremap <silent> <F11> :YRShow<CR>

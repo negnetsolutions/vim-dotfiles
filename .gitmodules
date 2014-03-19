@@ -149,3 +149,6 @@
   ignore = dirty
 	path = bundle/vim-scripts-yankring
 	url = https://github.com/vim-scripts/YankRing.vim.git
+[submodule "bundle/rking-ag"]
+	path = bundle/rking-ag
+	url = https://github.com/rking/ag.vim.git
