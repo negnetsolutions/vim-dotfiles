@@ -152,3 +152,6 @@
 [submodule "bundle/rking-ag"]
 	path = bundle/rking-ag
 	url = https://github.com/rking/ag.vim.git
+[submodule "bundle/vim-tmux-navigator"]
+	path = bundle/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git
