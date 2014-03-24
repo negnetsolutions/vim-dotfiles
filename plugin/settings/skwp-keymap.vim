@@ -15,16 +15,24 @@ nnoremap ,ow viwp
 nnoremap Y y$
 
 " Leader
+"let mapleader = "\<Space>"
 let mapleader = ","
 let maplocalleader = "\\"
+
+vmap <Leader>y "*y
+vmap <Leader>d "*d
+nmap <Leader>p "*p
+nmap <Leader>P "*P
+vmap <Leader>p "*p
+vmap <Leader>P "*P
 
 " ========================================
 " RSI Prevention - keyboard remaps
 " ========================================
 " Certain things we do every day as programmers stress
-" out our hands. For example, typing underscores and 
+" out our hands. For example, typing underscores and
 " dashes are very common, and in position that require
-" a lot of hand movement. Vim to the rescue 
+" a lot of hand movement. Vim to the rescue
 "
 " Now using the middle finger of either hand you can type
 " underscores with apple-k or apple-d, and add Shift
@@ -77,8 +85,8 @@ nnoremap <silent> K :GitGrep <cword><CR>
 " ==============================
 " Window/Tab/Split Manipulation
 " ==============================
-" Move between split windows by using the four directions H, L, I, N 
-" (note that  I use I and N instead of J and K because  J already does 
+" Move between split windows by using the four directions H, L, I, N
+" (note that  I use I and N instead of J and K because  J already does
 " line joins and K is mapped to GitGrep the current word
 noremap <C-h>  <C-w>h
 noremap <C-j>  <C-w>j
@@ -90,7 +98,7 @@ map <silent> <D-H> :tabprevious<cr>
 map <silent> <D-L> :tabnext<cr>
 
 " Zoom in and out of current window with ,,
-map <silent> ,, <C-w>o
+map <silent> <space><space> :ZoomWin<cr>
 
 " Use numbers to pick the tab you want (like iTerm)
 map <silent> <D-1> :tabn 1<cr>
@@ -183,7 +191,7 @@ nmap ,bc :ClearBookmarks<cr>
 " Abbreviations to use...
 " ============================
 " snippets that are expanded with space
-" abbr pry! require 'pry'; binding.pry 
+" abbr pry! require 'pry'; binding.pry
 
 " ============================
 " Skipreturn
