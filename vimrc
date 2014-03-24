@@ -118,6 +118,8 @@ au BufRead,BufNewFile *.mks set filetype=markdown
 
 au BufNewFile,BufRead *.vim setlocal foldmethod=marker
 
+au FileType mail set wrap linebreak nolist textwidth=0 wrapmargin=0
+
 " ================ Faster ESC ========================
 inoremap jj <ESC>
 inoremap kk <ESC>
