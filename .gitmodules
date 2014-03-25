@@ -4,10 +4,10 @@
 [submodule "bundle/AndrewRadev-splitjoin"]
 	path = bundle/AndrewRadev-splitjoin
 	url = https://github.com/AndrewRadev/splitjoin.vim.git
-[submodule "bundle/raimondi-pickacolor"]
-  ignore = dirty
-	path = bundle/raimondi-pickacolor
-	url = https://github.com/Raimondi/PickAColor.git
+; [submodule "bundle/raimondi-pickacolor"]
+;   ignore = dirty
+; 	path = bundle/raimondi-pickacolor
+; 	url = https://github.com/Raimondi/PickAColor.git
 [submodule "bundle/austintaylor-vim-indentobject"]
 	path = bundle/austintaylor-vim-indentobject
 	url = https://github.com/austintaylor/vim-indentobject.git
@@ -15,9 +15,9 @@
   ignore = dirty
 	path = bundle/markabe-bufexplorer
 	url = https://github.com/markabe/bufexplorer.git
-[submodule "bundle/goglygeek-csapprox"]
-	path = bundle/goglygeek-csapprox
-	url = https://github.com/godlygeek/csapprox.git
+; [submodule "bundle/goglygeek-csapprox"]
+; 	path = bundle/goglygeek-csapprox
+; 	url = https://github.com/godlygeek/csapprox.git
 [submodule "bundle/godlygeek-tabular"]
 	path = bundle/godlygeek-tabular
 	url = https://github.com/godlygeek/tabular.git
@@ -84,15 +84,12 @@
 [submodule "bundle/vim-scripts-sudo"]
 	path = bundle/vim-scripts-sudo
 	url = https://github.com/vim-scripts/sudo.vim.git
-; [submodule "bundle/wincent-Command-T"]
-; 	path = bundle/wincent-Command-T
-; 	url = https://github.com/wincent/Command-T.git
 [submodule "snippets"]
 	path = snippets
 	url = https://github.com/scrooloose/snipmate-snippets.git
-[submodule "non-root-bundles/Shougo-neocomplache"]
-	path = non-root-bundles/Shougo-neocomplache
-	url = https://github.com/Shougo/neocomplcache.git
+; [submodule "non-root-bundles/Shougo-neocomplache"]
+; 	path = non-root-bundles/Shougo-neocomplache
+; 	url = https://github.com/Shougo/neocomplcache.git
 [submodule "bundle/sickill-vim-pasta"]
   ignore = dirty
 	path = bundle/sickill-vim-pasta
@@ -100,30 +97,18 @@
 [submodule "bundle/zakj-vim-showmarks"]
 	path = bundle/zakj-vim-showmarks
 	url = https://github.com/zakj/vim-showmarks.git
-; [submodule "bundle/vim-scripts-phpfolding"]
-; 	path = bundle/vim-scripts-phpfolding
-; 	url = https://github.com/vim-scripts/phpfolding.vim.git
 ; [submodule "bundle/shawncplus-phpcomplete"]
 ; 	path = bundle/shawncplus-phpcomplete
 ; 	url = https://github.com/shawncplus/phpcomplete.vim.git
-[submodule "bundle/tpope-vim-haml"]
-	path = bundle/tpope-vim-haml
-	url = https://github.com/tpope/vim-haml.git
-[submodule "bundle/tpope-vim-markdown"]
-	path = bundle/tpope-vim-markdown
-	url = https://github.com/tpope/vim-markdown.git
-[submodule "bundle/othree-html5"]
-	path = bundle/othree-html5
-	url = https://github.com/othree/html5.vim.git
 [submodule "bundle/b4winckler-vim-angry"]
 	path = bundle/b4winckler-vim-angry
 	url = https://github.com/b4winckler/vim-angry.git
 [submodule "bundle/tpope-vim-fugitive"]
 	path = bundle/tpope-vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "bundle/spf13-PIV"]
-	path = bundle/spf13-PIV
-	url = git://github.com/spf13/PIV.git
+; [submodule "bundle/spf13-PIV"]
+; 	path = bundle/spf13-PIV
+; 	url = git://github.com/spf13/PIV.git
 [submodule "bundle/kien-ctrlp"]
 	path = bundle/kien-ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
@@ -155,3 +140,10 @@
 [submodule "bundle/vim-tmux-navigator"]
 	path = bundle/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "bundle/vim-expand-region"]
+  ignore = dirty
+	path = bundle/vim-expand-region
+	url = https://github.com/terryma/vim-expand-region.git
+[submodule "bundle/vim-polyglot"]
+	path = bundle/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
