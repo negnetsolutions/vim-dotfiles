@@ -6,6 +6,8 @@ let g:ctrlp_custom_ignore = {
       \ 'dir':  '\.git$\|\.hg$\|\.svn$\|vendor\/symfony$',
       \ 'file': '\.exe$\|\.so$\|\.dll$' }
 
+let g:ctrlp_root_markers = ['.git/']
+
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
   " Use Ag over Grep
