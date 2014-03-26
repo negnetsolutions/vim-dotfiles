@@ -12,3 +12,5 @@ let g:netrw_list_hide='^\..*'
 let g:pasta_disabled_filetypes = ["netrw","python", "coffee", "markdown", "yaml", "slim"]
 
 let g:netrw_hide=1
+
+let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
