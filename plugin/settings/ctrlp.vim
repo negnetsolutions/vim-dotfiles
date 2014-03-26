@@ -1,5 +1,6 @@
 let g:ctrlp_working_path_mode = 'ra'
 
+" Map normal ctrlp mode to <leader>t
 let g:ctrlp_map = '<leader>t'
 
 let g:ctrlp_custom_ignore = {

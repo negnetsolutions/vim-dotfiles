@@ -38,6 +38,9 @@ nnoremap ; :
 "Go to last edit location with ,.
 nnoremap <leader>. '.
 
+" Map buffer tag mode to <leader>
+nmap <silent> <leader>tt :CtrlPBufTag<CR>
+
 " ,q to toggle quickfix window (where you have stuff like GitGrep)
 " ,oq to open it back up (rare)
 nmap <silent> <leader>q :cclose<CR>
