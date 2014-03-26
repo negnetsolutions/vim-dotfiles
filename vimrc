@@ -108,16 +108,10 @@ set sidescroll=1
 " ================ Filetype Settings ========================
 
 au BufRead,BufNewFile *.scss set filetype=scss
-
 au BufRead,BufNewFile *.template set filetype=html
 au BufRead,BufNewFile *.page set filetype=markdown
 au BufRead,BufNewFile *.mks set filetype=markdown
-
-" au BufNewFile,BufRead *.js setlocal foldmethod=marker
-" au BufNewFile,BufRead *.js setlocal foldmarker={,}
-
 au BufNewFile,BufRead *.vim setlocal foldmethod=marker
-
 au FileType mail set wrap linebreak nolist textwidth=0 wrapmargin=0
 
 " ================ Faster ESC ========================
