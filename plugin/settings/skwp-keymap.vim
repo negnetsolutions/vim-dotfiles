@@ -2,15 +2,6 @@
 " General vim sanity improvements
 " ========================================
 "
-" alias yw to yank the entire word 'yank inner word'
-" even if the cursor is halfway inside the word
-" FIXME: will not properly repeat when you use a dot (tie into repeat.vim)
-nnoremap ,yw yiww
-
-" ,ow = 'overwrite word', replace a word with what's in the yank buffer
-" FIXME: will not properly repeat when you use a dot (tie into repeat.vim)
-nnoremap ,ow viwp
-
 "make Y consistent with C and D
 nnoremap Y y$
 
@@ -45,39 +36,23 @@ imap <silent> <D-D> -
 nnoremap ; :
 
 "Go to last edit location with ,.
-nnoremap ,. '.
-
-" ==== NERD tree
-" ,m is less stressful on the fingers than ,n
-nmap ,m :NERDTreeToggle<CR>
+nnoremap <leader>. '.
 
 " ,q to toggle quickfix window (where you have stuff like GitGrep)
 " ,oq to open it back up (rare)
-nmap <silent> ,q :cclose<CR>
-nmap <silent> ,oq :copen<CR>
-
-" move up/down quickly by using Ctrl-j, Ctrl-k
-" which will move us around by functions
-nnoremap <silent> <C-j> }
-nnoremap <silent> <C-k> {
-
-" Open the project tree and expose current file in the nerdtree with Ctrl-\
-nnoremap <silent> <C-\> :NERDTreeFind<CR>
-
-" Command-/ to toggle comments
-map <D-/> :TComment<CR>
-imap <D-/> <Esc>:TComment<CR>i
+nmap <silent> <leader>q :cclose<CR>
+nmap <silent> <leader>oq :copen<CR>
 
 "open up a git grep line, with a quote started for the search
-nnoremap ,gg :GitGrep "
-nnoremap ,gcp :GitGrepCurrentPartial<CR>
+nnoremap <leader>gg :GitGrep "
+nnoremap <leader>gcp :GitGrepCurrentPartial<CR>
 
 " hit ,f to find the definition of the current class
 " this uses ctags. the standard way to get this is Ctrl-]
-nnoremap <silent> ,f <C-]>
+nnoremap <silent> <leader>f <C-]>
 
 "toggle between last two buffers with Z (normally ctrl-shift-6)
-nnoremap <silent> ,z <C-^>
+nnoremap <silent> <leader>z <C-^>
 
 "git grep the current word using K (mnemonic Kurrent)
 nnoremap <silent> K :GitGrep <cword><CR>
@@ -93,11 +68,7 @@ noremap <C-j>  <C-w>j
 noremap <C-k>  <C-w>k
 noremap <C-l>  <C-w>l
 
-" Move between tabs with Cmd-Shift-H and Cmd-Shift-L
-map <silent> <D-H> :tabprevious<cr>
-map <silent> <D-L> :tabnext<cr>
-
-" Zoom in and out of current window with ,,
+" Zoom in and out of current window with <space><space>
 map <silent> <space><space> :ZoomWin<cr>
 
 " Use numbers to pick the tab you want (like iTerm)
@@ -124,9 +95,6 @@ nnoremap <silent> Q :bw<CR>
 " Remap \Q to close a window (leave buffer open in memory)
 nnoremap <silent> <Leader>Q <C-w>c
 
-"open the taglist (method browser) using ,t
-" nnoremap <silent> ,T :TlistToggle<CR>
-
 " create <%= foo %> erb tags using Ctrl-k in edit mode
 imap <silent> <C-K> <%=   %><Esc>3hi
 
@@ -139,20 +107,19 @@ imap <silent> <C-J> <%  %><Esc>2hi
 
 " copy current filename into system clipboard - mnemonic: (c)urrent(f)ilename
 " this is helpful to paste someone the path you're looking at
-nnoremap <silent> ,cf :let @* = expand("%:p")<CR>
+nnoremap <silent> <leader>cf :let @* = expand("%:p")<CR>
 
 "Clear current search highlight by double tapping //
 nmap <silent> // :nohlsearch<CR>
-" map <leader><space> :noh<cr> "cancel search
 
 " (c)opy (c)ommand - which allows us to execute
 " the line we're looking at (it does so by yy-copy, colon
 " to get to the command mode, C-f to get to history editing
 " p to paste it, C-c to return to command mode, and CR to execute
-nmap <silent> ,cc yy:<C-f>p<C-c><CR>
+nmap <silent> <leader>cc yy:<C-f>p<C-c><CR>
 
 " Type ,hl to toggle highlighting on/off, and show current value.
-noremap ,hl :set hlsearch! hlsearch?<CR>
+noremap <leader>hl :set hlsearch! hlsearch?<CR>
 
 " Apple-* Highlight all occurrences of current word (like '*' but without moving)
 " http://vim.wikia.com/wiki/Highlight_all_search_pattern_matches
@@ -182,10 +149,10 @@ nmap sk :SplitjoinJoin<cr>
 " ============================
 "
 " Set anonymous bookmarks
-nmap ,bb :ToggleBookmark<cr>
-nmap ,bn :NextBookmark<cr>
-nmap ,bp :PreviousBookmark<cr>
-nmap ,bc :ClearBookmarks<cr>
+nmap <leader>bb :ToggleBookmark<cr>
+nmap <leader>bn :NextBookmark<cr>
+nmap <leader>bp :PreviousBookmark<cr>
+nmap <leader>bc :ClearBookmarks<cr>
 "
 " ============================
 " Abbreviations to use...
@@ -199,9 +166,5 @@ nmap ,bc :ClearBookmarks<cr>
 inoremap <s-cr> <esc>A<cr>
 inoremap <D-cr> <esc>A;<cr>
 
-" Yank text to the OSX Clipboard
-noremap <leader>y "*y
-noremap <leader>yy "*Y
-
 " Preserve indentation while pasting text from the OS X clipboard
-noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
+noremap <leader>pt :set paste<CR>:put  *<CR>:set nopaste<CR>
