@@ -150,3 +150,6 @@
 [submodule "non-root-bundles/shougo-neocomplcache"]
 	path = non-root-bundles/shougo-neocomplcache
 	url = https://github.com/Shougo/neocomplcache.vim.git
+[submodule "bundle/wellle-tmux-complete"]
+	path = bundle/wellle-tmux-complete
+	url = https://github.com/wellle/tmux-complete.vim.git
