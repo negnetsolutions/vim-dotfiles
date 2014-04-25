@@ -11,10 +11,6 @@
 [submodule "bundle/austintaylor-vim-indentobject"]
 	path = bundle/austintaylor-vim-indentobject
 	url = https://github.com/austintaylor/vim-indentobject.git
-[submodule "bundle/markabe-bufexplorer"]
-  ignore = dirty
-	path = bundle/markabe-bufexplorer
-	url = https://github.com/markabe/bufexplorer.git
 ; [submodule "bundle/goglygeek-csapprox"]
 ; 	path = bundle/goglygeek-csapprox
 ; 	url = https://github.com/godlygeek/csapprox.git
