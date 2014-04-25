@@ -149,3 +149,6 @@
 [submodule "bundle/wellle-tmux-complete"]
 	path = bundle/wellle-tmux-complete
 	url = https://github.com/wellle/tmux-complete.vim.git
+[submodule "bundle/mkitt-tabline"]
+	path = bundle/mkitt-tabline
+	url = https://github.com/mkitt/tabline.vim.git
