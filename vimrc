@@ -87,7 +87,7 @@ set linebreak    "Wrap lines at convenient points
 
 set foldmethod=syntax " fold based on indent
 set foldnestmax=3     " deepest fold is 3 levels
-" set nofoldenable      " dont fold by default
+set foldlevelstart=20 " open all folds by default
 let javaScript_fold=1 " turn on javascript folding
 nnoremap <Space> zA
 vnoremap <Space> zA
@@ -111,6 +111,7 @@ au BufRead,BufNewFile *.scss set filetype=scss
 au BufRead,BufNewFile *.template set filetype=html
 au BufRead,BufNewFile *.page set filetype=markdown
 au BufRead,BufNewFile *.mks set filetype=markdown
+au BufRead,BufNewFile *.tpl.php set filetype=html
 au BufNewFile,BufRead *.vim setlocal foldmethod=marker
 au FileType mail set wrap linebreak nolist textwidth=0 wrapmargin=0
 
