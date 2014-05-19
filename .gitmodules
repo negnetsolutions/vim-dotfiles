@@ -152,3 +152,6 @@
 [submodule "bundle/gregsecton-gitv"]
 	path = bundle/gregsecton-gitv
 	url = https://github.com/gregsexton/gitv.git
+[submodule "bundle/vim-negnetsolutions-polyglot"]
+	path = bundle/vim-negnetsolutions-polyglot
+	url = https://github.com/negnetsolutions/vim-polyglot.git
