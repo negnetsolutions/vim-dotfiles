@@ -142,7 +142,7 @@
 	url = https://github.com/terryma/vim-expand-region.git
 [submodule "bundle/vim-polyglot"]
 	path = bundle/vim-polyglot
-	url = https://github.com/sheerun/vim-polyglot.git
+	url = git@github.com:negnetsolutions/vim-polyglot.git
 [submodule "non-root-bundles/shougo-neocomplcache"]
 	path = non-root-bundles/shougo-neocomplcache
 	url = https://github.com/Shougo/neocomplcache.vim.git
