@@ -39,7 +39,7 @@ nnoremap ; :
 nnoremap <leader>. '.
 
 " Map buffer tag mode to <leader>
-nmap <silent> <leader>tt :CtrlPBufTag<CR>
+nnoremap <silent> <leader>f :CtrlPBufTag<CR>
 nmap <silent> <leader>be :CtrlPBuffer<CR>
 
 " ,q to toggle quickfix window (where you have stuff like GitGrep)
@@ -47,13 +47,15 @@ nmap <silent> <leader>be :CtrlPBuffer<CR>
 nmap <silent> <leader>q :cclose<CR>
 nmap <silent> <leader>oq :copen<CR>
 
+" Fix yankring_o mapping so <leader> (,) isn't mapped.
+let g:yankring_o_keys  = 'b B w W e E d h j k l H M L y G ^ 0 $ ;'
+let g:yankring_o_keys .= ' g_  g^ gm g$ gk gj gg ge gE - + _ '
+let g:yankring_o_keys .= ' iw iW aw aW as is ap ip a] a[ i] i[ a) a( ab i) i( ib a> a< i> i< at it a} a{ aB i} i{ iB a" a'' a` i" i'' i`'
+
 "open up a git grep line, with a quote started for the search
 nnoremap <leader>gg :GitGrep "
 nnoremap <leader>gcp :GitGrepCurrentPartial<CR>
 
-" hit ,f to find the definition of the current class
-" this uses ctags. the standard way to get this is Ctrl-]
-nnoremap <silent> <leader>f <C-]>
 
 "toggle between last two buffers with Z (normally ctrl-shift-6)
 nnoremap <silent> <leader>z <C-^>
