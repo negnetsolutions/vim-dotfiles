@@ -155,3 +155,6 @@
 [submodule "bundle/vim-negnetsolutions-polyglot"]
 	path = bundle/vim-negnetsolutions-polyglot
 	url = https://github.com/negnetsolutions/vim-polyglot.git
+[submodule "bundle/vim-scripts-dbext"]
+	path = bundle/vim-scripts-dbext
+	url = https://github.com/vim-scripts/dbext.vim.git
