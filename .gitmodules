@@ -159,6 +159,3 @@
 	path = bundle/vitality
   ignore = dirty
 	url = https://github.com/sjl/vitality.vim.git
-[submodule "bundle/vim-numbertoggle"]
-	path = bundle/vim-numbertoggle
-	url = https://github.com/jeffkreeftmeijer/vim-numbertoggle.git
