@@ -155,7 +155,3 @@
 [submodule "bundle/vim-negnetsolutions-polyglot"]
 	path = bundle/vim-negnetsolutions-polyglot
 	url = https://github.com/negnetsolutions/vim-polyglot.git
-[submodule "bundle/vitality"]
-	path = bundle/vitality
-  ignore = dirty
-	url = https://github.com/sjl/vitality.vim.git
