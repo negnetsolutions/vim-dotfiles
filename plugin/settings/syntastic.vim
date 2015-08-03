@@ -21,6 +21,8 @@ let g:syntastic_html_tidy_ignore_errors = [
 			\ 'proprietary attribute \"hidden\"',
 			\ 'proprietary attribute \"ng-',
 			\ '<svg> is not recognized!',
+      \ '<g> is not recognized!',
+      \ '<animatetransform> is not recognized!',
 			\ 'discarding unexpected <svg>',
 			\ 'discarding unexpected </svg>',
 			\ '<rect> is not recognized!',
