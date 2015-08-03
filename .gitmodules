@@ -105,12 +105,6 @@
 ; [submodule "bundle/spf13-PIV"]
 ; 	path = bundle/spf13-PIV
 ; 	url = git://github.com/spf13/PIV.git
-[submodule "bundle/kien-ctrlp"]
-	path = bundle/kien-ctrlp
-	url = git://github.com/kien/ctrlp.vim.git
-; [submodule "bundle/myusuf3-numbers"]
-; 	path = bundle/myusuf3-numbers
-; 	url = git://github.com/myusuf3/numbers.vim.git
 [submodule "bundle/tristen-vim-sparkup"]
 	path = bundle/tristen-vim-sparkup
 	url = https://github.com/tristen/vim-sparkup.git
@@ -133,9 +127,6 @@
 [submodule "bundle/rking-ag"]
 	path = bundle/rking-ag
 	url = https://github.com/rking/ag.vim.git
-[submodule "bundle/vim-tmux-navigator"]
-	path = bundle/vim-tmux-navigator
-	url = https://github.com/christoomey/vim-tmux-navigator.git
 [submodule "bundle/vim-expand-region"]
   ignore = dirty
 	path = bundle/vim-expand-region
