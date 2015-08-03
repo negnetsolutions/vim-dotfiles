@@ -146,3 +146,6 @@
 [submodule "bundle/vim-negnetsolutions-polyglot"]
 	path = bundle/vim-negnetsolutions-polyglot
 	url = https://github.com/negnetsolutions/vim-polyglot.git
+[submodule "bundle/ctrlpvim"]
+	path = bundle/ctrlpvim
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
