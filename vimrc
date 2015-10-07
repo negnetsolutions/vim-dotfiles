@@ -88,6 +88,7 @@ set linebreak    "Wrap lines at convenient points
 set foldmethod=syntax " fold based on indent
 set foldnestmax=3     " deepest fold is 3 levels
 set foldlevelstart=20 " open all folds by default
+set foldenable
 let javaScript_fold=1 " turn on javascript folding
 nnoremap <Space> zA
 vnoremap <Space> zA
