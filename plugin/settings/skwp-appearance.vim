@@ -28,13 +28,17 @@ else
   let g:solarized_termtrans=1
   let g:solarized_termcolors=16
   set mouse=a
-  set ttymouse=xterm2
+
+  if !has('nvim')
+      set ttymouse=xterm2
+  endif
+
   set ttyfast
 endif
 
 set nocompatible   " Disable vi-compatibility
 set laststatus=2   " Always show the statusline
-set encoding=utf-8 " Necessary to show Unicode glyphs
+" set encoding=utf-8 " Necessary to show Unicode glyphs
 " let g:Powerline_theme = 'skwp'
 " let g:Powerline_colorscheme = 'skwp'
 let g:airline_theme= 'solarized'
