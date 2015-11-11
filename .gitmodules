@@ -83,9 +83,6 @@
 [submodule "snippets"]
 	path = snippets
 	url = https://github.com/scrooloose/snipmate-snippets.git
-; [submodule "non-root-bundles/Shougo-neocomplache"]
-; 	path = non-root-bundles/Shougo-neocomplache
-; 	url = https://github.com/Shougo/neocomplcache.git
 [submodule "bundle/sickill-vim-pasta"]
   ignore = dirty
 	path = bundle/sickill-vim-pasta
@@ -120,10 +117,6 @@
 [submodule "bundle/ap-vim-css-color"]
 	path = bundle/ap-vim-css-color
 	url = https://github.com/ap/vim-css-color.git
-; [submodule "bundle/vim-scripts-yankring"]
-;   ignore = dirty
-; 	path = bundle/vim-scripts-yankring
-; 	url = https://github.com/vim-scripts/YankRing.vim.git
 [submodule "bundle/vim-expand-region"]
   ignore = dirty
 	path = bundle/vim-expand-region
@@ -149,3 +142,6 @@
 [submodule "bundle/tmux-navigator"]
 	path = bundle/tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "bundle/shougo-unite"]
+	path = bundle/shougo-unite
+	url = https://github.com/Shougo/unite.vim.git

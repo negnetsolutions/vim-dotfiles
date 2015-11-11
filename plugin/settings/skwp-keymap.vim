@@ -40,7 +40,8 @@ nnoremap <leader>. '.
 
 " Map buffer tag mode to <leader>
 nnoremap <silent> <leader>f :CtrlPBufTag<CR>
-nmap <silent> <leader>be :CtrlPBuffer<CR>
+" nmap <silent> <leader>be :CtrlPBuffer<CR>
+nmap <silent> <leader>be :Unite buffer file -start-insert<CR>
 
 " ,q to toggle quickfix window (where you have stuff like GitGrep)
 " ,oq to open it back up (rare)
