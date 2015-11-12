@@ -17,10 +17,6 @@
 [submodule "bundle/godlygeek-tabular"]
 	path = bundle/godlygeek-tabular
 	url = https://github.com/godlygeek/tabular.git
-[submodule "bundle/mikefarmer-snipmate"]
-  ignore = dirty
-	path = bundle/mikefarmer-snipmate
-	url = https://github.com/mikefarmer/snipmate.vim.git
 [submodule "bundle/raimondi-delimitMate"]
 	path = bundle/raimondi-delimitMate
 	url = https://github.com/Raimondi/delimitMate.git
@@ -67,10 +63,6 @@
 [submodule "bundle/vim-scripts-AutoTag"]
 	path = bundle/vim-scripts-AutoTag
 	url = https://github.com/vim-scripts/AutoTag.git
-[submodule "bundle/vim-scripts-ZoomWin"]
-  ignore = dirty
-	path = bundle/vim-scripts-ZoomWin
-	url = https://github.com/vim-scripts/ZoomWin.git
 [submodule "bundle/vim-scripts-argtextobj"]
 	path = bundle/vim-scripts-argtextobj
 	url = https://github.com/vim-scripts/argtextobj.vim.git
@@ -111,9 +103,6 @@
 [submodule "bundle/mhinz-vim-signifiy"]
 	path = bundle/mhinz-vim-signifiy
 	url = https://github.com/mhinz/vim-signify.git
-[submodule "bundle/vim-easymotion"]
-	path = bundle/vim-easymotion
-	url = https://github.com/Lokaltog/vim-easymotion.git
 [submodule "bundle/ap-vim-css-color"]
 	path = bundle/ap-vim-css-color
 	url = https://github.com/ap/vim-css-color.git

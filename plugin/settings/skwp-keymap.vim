@@ -6,7 +6,6 @@
 nnoremap Y y$
 
 " Leader
-"let mapleader = "\<Space>"
 let mapleader = ","
 let maplocalleader = "\\"
 
@@ -38,11 +37,6 @@ nnoremap ; :
 "Go to last edit location with ,.
 nnoremap <leader>. '.
 
-" Map buffer tag mode to <leader>
-nnoremap <silent> <leader>f :CtrlPBufTag<CR>
-" nmap <silent> <leader>be :CtrlPBuffer<CR>
-nmap <silent> <leader>be :Unite buffer file -start-insert<CR>
-
 " ,q to toggle quickfix window (where you have stuff like GitGrep)
 " ,oq to open it back up (rare)
 nmap <silent> <leader>q :cclose<CR>
@@ -56,7 +50,6 @@ let g:yankring_o_keys .= ' iw iW aw aW as is ap ip a] a[ i] i[ a) a( ab i) i( ib
 "open up a git grep line, with a quote started for the search
 nnoremap <leader>gg :GitGrep "
 nnoremap <leader>gcp :GitGrepCurrentPartial<CR>
-
 
 "toggle between last two buffers with Z (normally ctrl-shift-6)
 nnoremap <silent> <leader>z <C-^>
@@ -74,9 +67,6 @@ noremap <C-h>  <C-w>h
 noremap <C-j>  <C-w>j
 noremap <C-k>  <C-w>k
 noremap <C-l>  <C-w>l
-
-" Zoom in and out of current window with <space><space>
-map <silent> <space><space> :ZoomWin<cr>
 
 " Use numbers to pick the tab you want (like iTerm)
 map <silent> <D-1> :tabn 1<cr>
@@ -101,12 +91,6 @@ nnoremap <silent> Q :bw<CR>
 
 " Remap \Q to close a window (leave buffer open in memory)
 nnoremap <silent> <Leader>Q <C-w>c
-
-" create <%= foo %> erb tags using Ctrl-k in edit mode
-imap <silent> <C-K> <%=   %><Esc>3hi
-
-" create <%= foo %> erb tags using Ctrl-j in edit mode
-imap <silent> <C-J> <%  %><Esc>2hi
 
 " ============================
 " Shortcuts for everyday tasks
@@ -150,22 +134,6 @@ endif
 " SplitJoin plugin
 nmap sj :SplitjoinSplit<cr>
 nmap sk :SplitjoinJoin<cr>
-
-" ============================
-" VimBookmarking
-" ============================
-"
-" Set anonymous bookmarks
-nmap <leader>bb :ToggleBookmark<cr>
-nmap <leader>bn :NextBookmark<cr>
-nmap <leader>bp :PreviousBookmark<cr>
-nmap <leader>bc :ClearBookmarks<cr>
-"
-" ============================
-" Abbreviations to use...
-" ============================
-" snippets that are expanded with space
-" abbr pry! require 'pry'; binding.pry
 
 " ============================
 " Skipreturn
