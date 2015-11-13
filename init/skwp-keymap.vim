@@ -37,11 +37,6 @@ nnoremap ; :
 "Go to last edit location with ,.
 nnoremap <leader>. '.
 
-" Map buffer tag mode to <leader>
-nnoremap <silent> <leader>f :CtrlPBufTag<CR>
-nnoremap <silent> <leader>r :CtrlPMRUFiles<CR>
-nmap <silent> <leader>be :Unite buffer file -start-insert<CR>
-
 " ,q to toggle quickfix window (where you have stuff like GitGrep)
 " ,oq to open it back up (rare)
 nmap <silent> <leader>q :cclose<CR>
