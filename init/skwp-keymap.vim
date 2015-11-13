@@ -47,20 +47,8 @@ nmap <silent> <leader>be :Unite buffer file -start-insert<CR>
 nmap <silent> <leader>q :cclose<CR>
 nmap <silent> <leader>oq :copen<CR>
 
-" Fix yankring_o mapping so <leader> (,) isn't mapped.
-let g:yankring_o_keys  = 'b B w W e E d h j k l H M L y G ^ 0 $ ;'
-let g:yankring_o_keys .= ' g_  g^ gm g$ gk gj gg ge gE - + _ '
-let g:yankring_o_keys .= ' iw iW aw aW as is ap ip a] a[ i] i[ a) a( ab i) i( ib a> a< i> i< at it a} a{ aB i} i{ iB a" a'' a` i" i'' i`'
-
-"open up a git grep line, with a quote started for the search
-nnoremap <leader>gg :GitGrep "
-nnoremap <leader>gcp :GitGrepCurrentPartial<CR>
-
 "toggle between last two buffers with Z (normally ctrl-shift-6)
 nnoremap <silent> <leader>z <C-^>
-
-"git grep the current word using K (mnemonic Kurrent)
-nnoremap <silent> K :GitGrep <cword><CR>
 
 " ==============================
 " Window/Tab/Split Manipulation
@@ -72,18 +60,6 @@ noremap <C-h>  <C-w>h
 noremap <C-j>  <C-w>j
 noremap <C-k>  <C-w>k
 noremap <C-l>  <C-w>l
-
-" Use numbers to pick the tab you want (like iTerm)
-map <silent> <D-1> :tabn 1<cr>
-map <silent> <D-2> :tabn 2<cr>
-map <silent> <D-3> :tabn 3<cr>
-map <silent> <D-4> :tabn 4<cr>
-map <silent> <D-5> :tabn 5<cr>
-map <silent> <D-6> :tabn 6<cr>
-map <silent> <D-7> :tabn 7<cr>
-map <silent> <D-8> :tabn 8<cr>
-map <silent> <D-9> :tabn 9<cr>
-map <silent> <D-0> :tabn 0<cr>
 
 " Create window splits easier. The default
 " way is Ctrl-w,v and Ctrl-w,s. I remap
@@ -134,11 +110,6 @@ if exists(":Tabularize")
   nmap <C-a> :Tabularize /
   vmap <C-a> :Tabularize /
 endif
-
-" ===
-" SplitJoin plugin
-nmap sj :SplitjoinSplit<cr>
-nmap sk :SplitjoinJoin<cr>
 
 " ============================
 " Skipreturn
