@@ -45,6 +45,8 @@ Plugin 'wellle/tmux-complete.vim'
 Plugin 'zakj/vim-showmarks'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/neocomplete.vim'
+Plugin 'gregsexton/gitv'
+Plugin 'tpope/vim-fugitive'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
