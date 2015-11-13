@@ -9,7 +9,7 @@ set gcr=a:blinkon0              "Disable cursor blink
 
 set autoread                    "Reload files changed outside vim
 
-set spell                       "Enable Spelling
+" set spell                       "Enable Spelling
 
 
 " This makes vim act like all other editors, buffers can
