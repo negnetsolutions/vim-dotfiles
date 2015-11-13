@@ -82,7 +82,6 @@ set sidescroll=1
 
 " ================ Faster ESC ========================
 inoremap jj <ESC>
-inoremap kk <ESC>
 
 " ================ Security ========================
 set modelines=0
