@@ -1,6 +1,7 @@
 " set default sort order for netrw
 let g:netrw_sort_by="name"
-let g:netrw_browse_split=3
+" let g:netrw_browse_split=3
+let g:netrw_browse_split=0
 let g:netrw_liststyle=3
 let g:netrw_banner=0
 let g:netrw_altv= 1
