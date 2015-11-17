@@ -7,7 +7,7 @@ call unite#filters#sorter_default#use(['sorter_rank'])
 call unite#custom#source('file,file/new,buffer,file_rec,line,outline,file_mru', 'matchers', 'matcher_fuzzy')
 
 " Map Unite Keys
-nmap <silent> <leader>be :Unite buffer -no-start-insert<CR>
+nmap <silent> <leader>be :Unite buffer -start-insert<CR>
 nmap <silent> <leader>t :Unite file -start-insert<CR>
 nmap <silent> <leader>f :Unite outline -start-insert<CR>
 nnoremap <silent> <leader>r :Unite file_mru -start-insert<CR>
