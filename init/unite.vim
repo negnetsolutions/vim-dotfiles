@@ -16,6 +16,7 @@ nnoremap <silent> <leader>r :Unite file_mru -start-insert<CR>
 call unite#custom_source('file,file_rec,file_rec/async,grep',
       \ 'ignore_pattern', join([
       \ '\.git/',
+      \ '\.svn/',
       \ '\.bundle/',
       \ '\.sass-cache/',
       \ '\.DS_Store',
