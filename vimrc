@@ -2,56 +2,49 @@ set nocompatible
 set encoding=utf-8 " Necessary to show Unicode glyphs
 filetype off
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'rking/ag.vim'
+Plug 'ap/vim-css-color'
+Plug 'austintaylor/vim-indentobject'
+Plug 'b4winckler/vim-angry'
+Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'godlygeek/tabular'
+Plug 'mhinz/vim-signify'
+Plug 'mkitt/tabline.vim'
+Plug 'Raimondi/delimitMate'
+Plug 'scrooloose/syntastic'
+Plug 'Shougo/unite.vim'
+Plug 'Shougo/unite-outline'
+Plug 'Shougo/neomru.vim'
+Plug 'sickill/vim-pasta'
+Plug 'sjl/gundo.vim'
+Plug 'skwp/greplace.vim'
+Plug 'skwp/vim-colors-solarized'
+Plug 'skwp/vim-indexed-search'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'tristen/vim-sparkup'
+Plug 'vim-scripts/AnsiEsc.vim'
+Plug 'vim-scripts/AutoTag'
+Plug 'vim-scripts/argtextobj.vim'
+Plug 'vim-scripts/L9'
+Plug 'vim-scripts/lastpos.vim'
+Plug 'vim-scripts/sudo.vim'
+Plug 'wellle/tmux-complete.vim'
+Plug 'zakj/vim-showmarks'
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+Plug 'Shougo/neocomplete.vim'
+Plug 'gregsexton/gitv'
+Plug 'tpope/vim-fugitive'
 
-Plugin 'AndrewRadev/splitjoin.vim'
-Plugin 'rking/ag.vim'
-Plugin 'ap/vim-css-color'
-Plugin 'austintaylor/vim-indentobject'
-Plugin 'b4winckler/vim-angry'
-Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'godlygeek/tabular'
-Plugin 'mhinz/vim-signify'
-Plugin 'mkitt/tabline.vim'
-Plugin 'Raimondi/delimitMate'
-Plugin 'scrooloose/syntastic'
-Plugin 'Shougo/unite.vim'
-Plugin 'Shougo/unite-outline'
-Plugin 'Shougo/neomru.vim'
-Plugin 'sickill/vim-pasta'
-Plugin 'sjl/gundo.vim'
-Plugin 'skwp/greplace.vim'
-Plugin 'skwp/vim-colors-solarized'
-Plugin 'skwp/vim-indexed-search'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'tristen/vim-sparkup'
-Plugin 'vim-scripts/AnsiEsc.vim'
-Plugin 'vim-scripts/AutoTag'
-Plugin 'vim-scripts/argtextobj.vim'
-Plugin 'vim-scripts/L9'
-Plugin 'vim-scripts/lastpos.vim'
-Plugin 'vim-scripts/sudo.vim'
-Plugin 'wellle/tmux-complete.vim'
-Plugin 'zakj/vim-showmarks'
-Plugin 'Shougo/vimproc.vim'
-Plugin 'Shougo/neocomplete.vim'
-Plugin 'gregsexton/gitv'
-Plugin 'tpope/vim-fugitive'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call plug#end()
 
 " Initialize Settings
 runtime! init/**.vim
