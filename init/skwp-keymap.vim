@@ -24,13 +24,6 @@ vmap <Leader>P "*P
 " dashes are very common, and in position that require
 " a lot of hand movement. Vim to the rescue
 "
-" Now using the middle finger of either hand you can type
-" underscores with apple-k or apple-d, and add Shift
-" to type dashes
-imap <silent> <D-k> _
-imap <silent> <D-d> _
-imap <silent> <D-K> -
-imap <silent> <D-D> -
 " Don't have to use Shift to get into command mode, just hit semicolon
 nnoremap ; :
 
@@ -65,9 +58,6 @@ nnoremap <silent> ss <C-w>s
 " Use Q to kill a buffer
 nnoremap <silent> Q :bw<CR>
 
-" Remap \Q to close a window (leave buffer open in memory)
-nnoremap <silent> <Leader>Q <C-w>c
-
 " ============================
 " Shortcuts for everyday tasks
 " ============================
@@ -78,19 +68,6 @@ nnoremap <silent> <leader>cf :let @* = expand("%:p")<CR>
 
 "Clear current search highlight by double tapping //
 nmap <silent> // :nohlsearch<CR>
-
-" (c)opy (c)ommand - which allows us to execute
-" the line we're looking at (it does so by yy-copy, colon
-" to get to the command mode, C-f to get to history editing
-" p to paste it, C-c to return to command mode, and CR to execute
-nmap <silent> <leader>cc yy:<C-f>p<C-c><CR>
-
-" Type ,hl to toggle highlighting on/off, and show current value.
-noremap <leader>hl :set hlsearch! hlsearch?<CR>
-
-" Apple-* Highlight all occurrences of current word (like '*' but without moving)
-" http://vim.wikia.com/wiki/Highlight_all_search_pattern_matches
-nnoremap <D-*> :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
 
 " These are very similar keys. Typing 'a will jump to the line in the current
 " file marked with ma. However, `a will jump to the line and column marked
@@ -105,12 +82,6 @@ if exists(":Tabularize")
   nmap <C-a> :Tabularize /
   vmap <C-a> :Tabularize /
 endif
-
-" ============================
-" Skipreturn
-" ============================
-inoremap <s-cr> <esc>A<cr>
-inoremap <D-cr> <esc>A;<cr>
 
 " Preserve indentation while pasting text from the OS X clipboard
 noremap <leader>pt :set paste<CR>:put  *<CR>:set nopaste<CR>
