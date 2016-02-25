@@ -6,7 +6,11 @@ let g:solarized_termtrans=1
 let g:solarized_termcolors=16
 
 set mouse=a
-set ttymouse=xterm2
+
+if !has('nvim')
+  set ttymouse=xterm2
+endif
+
 set ttyfast
 
 set laststatus=2   " Always show the statusline
