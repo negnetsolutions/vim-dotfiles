@@ -43,6 +43,7 @@ Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'Shougo/neocomplete.vim'
 Plug 'gregsexton/gitv'
 Plug 'tpope/vim-fugitive'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 
 call plug#end()
 
