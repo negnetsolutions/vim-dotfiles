@@ -40,7 +40,7 @@ Plug 'vim-scripts/sudo.vim'
 Plug 'wellle/tmux-complete.vim'
 Plug 'zakj/vim-showmarks'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-Plug 'Shougo/neocomplete.vim'
+" Plug 'Shougo/neocomplete.vim'
 Plug 'gregsexton/gitv'
 Plug 'tpope/vim-fugitive'
 Plug 'tmux-plugins/vim-tmux-focus-events'
