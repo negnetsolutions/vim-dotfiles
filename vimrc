@@ -22,7 +22,10 @@ Plug 'stanangeloff/php.vim'
 
 " syntax
 Plug 'Raimondi/delimitMate'
-Plug 'w0rp/ale'
+
+if v:version >= 8
+  Plug 'w0rp/ale'
+endif
 
 " UI
 Plug 'Shougo/unite.vim'
