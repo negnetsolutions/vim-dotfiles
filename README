@@ -5,17 +5,6 @@
           /___/
 _____________________________________________________________________
 
-# Requirements
-
-* exuberant ctags installed in /usr/local/bin
-
 # Installation
 
 clone git://github.com/negnetsolutions/vim-dotfiles.git ~/.vim
-~/.vim/install.sh
-
-
-# Updating
-
-cd ~/.vim
-./update.sh
