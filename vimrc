@@ -23,7 +23,7 @@ Plug 'stanangeloff/php.vim'
 " syntax
 Plug 'Raimondi/delimitMate'
 
-if v:version >= 8
+if v:version > 740
   Plug 'w0rp/ale'
 endif
 
