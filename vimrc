@@ -58,7 +58,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 
 " Session Management
-Plug 'ahri/vim-sesspit'
+if has('mac')
+  Plug 'ahri/vim-sesspit'
+endif
 
 "Window Managers
 Plug 'roman/golden-ratio'
