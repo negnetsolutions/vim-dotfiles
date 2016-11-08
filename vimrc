@@ -57,11 +57,6 @@ Plug 'skwp/vim-colors-solarized'
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 
-" Session Management
-if has('mac')
-  Plug 'ahri/vim-sesspit'
-endif
-
 "Window Managers
 Plug 'roman/golden-ratio'
 
