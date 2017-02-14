@@ -22,6 +22,7 @@ Plug 'stanangeloff/php.vim'
 
 " syntax
 Plug 'Raimondi/delimitMate'
+Plug 'lumiliet/vim-twig'
 
 if v:version > 740
   Plug 'w0rp/ale'
