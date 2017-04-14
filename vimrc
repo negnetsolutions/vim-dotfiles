@@ -23,6 +23,7 @@ Plug 'stanangeloff/php.vim'
 " syntax
 Plug 'Raimondi/delimitMate'
 Plug 'lumiliet/vim-twig'
+Plug 'chr4/nginx.vim' "nginx syntax
 
 if v:version > 740
   Plug 'w0rp/ale'
