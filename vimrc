@@ -56,8 +56,11 @@ Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Theme
-" Plug 'skwp/vim-colors-solarized'
-Plug 'trevordmiller/nova-vim'
+if(exists('+termguicolors'))
+  Plug 'trevordmiller/nova-vim'
+else
+  Plug 'skwp/vim-colors-solarized'
+endif
 
 " Git Helpers
 Plug 'tpope/vim-fugitive'
