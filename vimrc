@@ -24,6 +24,9 @@ Plug 'stanangeloff/php.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'lumiliet/vim-twig'
 Plug 'chr4/nginx.vim' "nginx syntax
+Plug 'pangloss/vim-javascript'
+Plug 'othree/html5.vim'
+Plug 'hail2u/vim-css3-syntax'
 
 if v:version > 740
   Plug 'w0rp/ale'
@@ -53,7 +56,8 @@ Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Theme
-Plug 'skwp/vim-colors-solarized'
+" Plug 'skwp/vim-colors-solarized'
+Plug 'trevordmiller/nova-vim'
 
 " Git Helpers
 Plug 'tpope/vim-fugitive'
