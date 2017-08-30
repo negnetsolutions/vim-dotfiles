@@ -1,4 +1,3 @@
-set background=dark
 set t_Co=256
 
 if( exists('+termguicolors'))
@@ -10,6 +9,8 @@ else
   let g:solarized_termcolors=16
   let g:airline_theme= 'solarized'
 endif
+
+set background=dark
 
 if &term =~ '256color'
     " Disable Background Color Erase (BCE) so that color schemes
