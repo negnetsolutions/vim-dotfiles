@@ -20,9 +20,6 @@ set hidden
 
 "turn on syntax highlighting
 syntax on
-syntax sync minlines=100
-syntax sync maxlines=240
-set synmaxcol=800
 
 " ================ Search Settings  =================
 
