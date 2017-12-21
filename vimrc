@@ -70,4 +70,4 @@ endif
 call plug#end()
 
 " Initialize Settings
-runtime! init/**.vim
+runtime! settings/**.vim
