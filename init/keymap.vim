@@ -77,11 +77,5 @@ nmap <silent> // :nohlsearch<CR>
 nnoremap ' `
 nnoremap ` '
 
-" Tabularization. Hit Ctrl-a then type a character you want to align by
-if exists(":Tabularize")
-  nmap <C-a> :Tabularize /
-  vmap <C-a> :Tabularize /
-endif
-
 " Preserve indentation while pasting text from the OS X clipboard
 noremap <leader>pt :set paste<CR>:put  *<CR>:set nopaste<CR>
