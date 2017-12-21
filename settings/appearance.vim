@@ -23,5 +23,6 @@ if !has('nvim')
 endif
 
 set ttyfast
+set lazyredraw
 
 set laststatus=2   " Always show the statusline
