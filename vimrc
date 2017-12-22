@@ -30,10 +30,15 @@ if v:version > 740
   Plug 'w0rp/ale'
 endif
 
+if has("python3") == 1 && v:version >= 800
+  Plug 'Shougo/denite.nvim'
+else
+  Plug 'Shougo/unite.vim'
+  Plug 'Shougo/unite-outline'
+  Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+endif
+
 " UI
-Plug 'Shougo/unite.vim'
-Plug 'Shougo/unite-outline'
-Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'Shougo/neomru.vim'
 Plug 'sickill/vim-pasta'
 Plug 'sjl/gundo.vim'
