@@ -41,7 +41,6 @@ endif
 " UI
 Plug 'Shougo/neomru.vim'
 Plug 'sickill/vim-pasta'
-Plug 'sjl/gundo.vim'
 Plug 'zakj/vim-showmarks'
 
 " Tab UI
