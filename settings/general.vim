@@ -90,13 +90,3 @@ endif
 
 " Map F5 to remove trailing whitespace
 :nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
-
-" Unset relative number when focus lost
-autocmd InsertEnter * :set norelativenumber
-autocmd InsertLeave * :set relativenumber
-
-:au FocusLost * :set norelativenumber
-:au FocusGained * :set relativenumber
-
-:au BufLeave * :set norelativenumber
-:au BufEnter * :set relativenumber
