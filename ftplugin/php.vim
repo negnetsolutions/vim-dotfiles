@@ -13,9 +13,6 @@ let php_sql_query = 0 "Disable sql highlight in php"
 setlocal foldmethod=indent
 setlocal omnifunc=phpcomplete#CompletePHP
 
-" S- to surround with php tag
-let b:surround_45 = "<?php \r ?>"
-
 syntax sync minlines=100
 syntax sync maxlines=240
 set synmaxcol=800
