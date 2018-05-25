@@ -72,9 +72,9 @@ else
 endif
 
 " Async Complete Plugins
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'yami-beta/asyncomplete-omni.vim'
+" Plug 'prabirshrestha/async.vim'
+" Plug 'prabirshrestha/asyncomplete.vim'
+" Plug 'yami-beta/asyncomplete-omni.vim'
 
 call plug#end()
 

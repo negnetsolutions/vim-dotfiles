@@ -15,9 +15,9 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
 let g:asyncomplete_auto_popup = 1
 
 
-call asyncomplete#register_source(asyncomplete#sources#omni#get_source_options({
-      \ 'name': 'omni',
-      \ 'whitelist': ['*'],
-      \ 'blacklist': ['html'],
-      \ 'completor': function('asyncomplete#sources#omni#completor')
-      \  }))
+" call asyncomplete#register_source(asyncomplete#sources#omni#get_source_options({
+"       \ 'name': 'omni',
+"       \ 'whitelist': ['*'],
+"       \ 'blacklist': ['html'],
+"       \ 'completor': function('asyncomplete#sources#omni#completor')
+"       \  }))
