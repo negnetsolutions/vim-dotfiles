@@ -16,3 +16,7 @@ setlocal omnifunc=phpcomplete#CompletePHP
 syntax sync minlines=100
 syntax sync maxlines=240
 set synmaxcol=800
+
+
+" let b:ale_linters = {'php': ['hack', 'hackfmt', 'langserver', 'phan', 'php -l', 'phpmd', 'phpstan', 'phpcbf', 'php-cs-fixer']}
+let b:ale_fixers = {'php': ['hackfmt', 'php_cs_fixer','phpcbf']}
