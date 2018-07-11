@@ -14,6 +14,7 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
 let g:asyncomplete_auto_popup = 1
 
+set wildignorecase
 
 " call asyncomplete#register_source(asyncomplete#sources#omni#get_source_options({
 "       \ 'name': 'omni',
