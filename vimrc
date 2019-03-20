@@ -74,10 +74,15 @@ else
   Plug 'skwp/vim-colors-solarized'
 endif
 
-" Async Complete Plugins
-" Plug 'prabirshrestha/async.vim'
-" Plug 'prabirshrestha/asyncomplete.vim'
-" Plug 'yami-beta/asyncomplete-omni.vim'
+" Language Servers
+if has('nvim')
+  " Plug 'autozimu/LanguageClient-neovim'
+  " Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs'}
+  " Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php'}
+  " Plug 'ncm2/ncm2'
+  " Plug 'roxma/nvim-yarp'
+  " Plug 'phpactor/ncm2-phpactor'
+endif
 
 call plug#end()
 
