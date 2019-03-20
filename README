@@ -8,3 +8,4 @@ _____________________________________________________________________
 # Installation
 
 clone git://github.com/negnetsolutions/vim-dotfiles.git ~/.vim
+vim +PlugInstall +qall
