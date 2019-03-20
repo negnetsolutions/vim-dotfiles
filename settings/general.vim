@@ -10,7 +10,9 @@ set gcr=a:blinkon0              "Disable cursor blink
 
 set autoread                    "Reload files changed outside vim
 
-" set spell                       "Enable Spelling
+if(exists('+termguicolors'))
+  set noshowmode                 "Disabled mode display
+endif
 
 
 " This makes vim act like all other editors, buffers can
