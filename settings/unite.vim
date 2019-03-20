@@ -1,12 +1,27 @@
 if has("python3") == 1 && v:version >= 800
-  "Use Denite
+  " Use Denite
+  call denite#custom#option('default', {
+        \ 'prompt': '»',
+        \ 'cursor_wrap': v:true,
+        \ 'auto_resize': v:true,
+        \ 'highlight_mode_insert': 'WildMenu'
+        \ })
+
+  call denite#custom#map('insert', '<C-n>', '<denite:move_to_next_line>', 'noremap')
+  call denite#custom#map('insert', '<C-p>', '<denite:move_to_previous_line>', 'noremap')
+  call denite#custom#map('insert', '<C-[>', '<denite:enter_mode:normal>', 'noremap')
+  call denite#custom#map('normal', '<C-[>', '<denite:quit>', 'noremap')
+
   " Map Denite Keys
   nmap <silent> <leader>be :Denite buffer<CR>
   nmap <silent> <leader>t :DeniteBufferDir file_rec -no-highlight-matched-char -no-highlight-matched-range -no-highlight-preview-line<CR>
+  call denite#custom#var('outline', 'options', ['--langmap=php:.engine.inc.module.theme.install.php'])
+  call denite#custom#var('outline', 'ignore_types', ['v','d'])
   nmap <silent> <leader>f :Denite outline<CR>
   nnoremap <silent> <leader>r :Denite file_mru<CR>
 else
-  "Use Unite
+  " Use Unite
+
   " Start in insert mode
   let g:unite_enable_start_insert = 1
 
