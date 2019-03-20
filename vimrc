@@ -16,6 +16,10 @@ Plug 'tomtom/tcomment_vim'
 " Search
 Plug 'rking/ag.vim'
 
+if has('nvim')
+  Plug 'machakann/vim-highlightedyank'
+endif
+
 " Language
 Plug 'stanangeloff/php.vim'
 Plug 'Raimondi/delimitMate' "auto-closing
