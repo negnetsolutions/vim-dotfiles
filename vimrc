@@ -64,7 +64,7 @@ Plug 'mhinz/vim-signify'
 Plug 'roman/golden-ratio'
 
 " Other
-Plug 'tristen/vim-sparkup'
+Plug 'mattn/emmet-vim'
 
 " Theme
 if(exists('+termguicolors'))
