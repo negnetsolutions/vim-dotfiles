@@ -9,12 +9,12 @@ nnoremap Y y$
 let mapleader = ","
 let maplocalleader = "\\"
 
-vmap <Leader>y "*y
-vmap <Leader>d "*d
-nmap <Leader>p "*p
-nmap <Leader>P "*P
-vmap <Leader>p "*p
-vmap <Leader>P "*P
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
 
 " ========================================
 " RSI Prevention - keyboard remaps
@@ -78,4 +78,4 @@ nnoremap ' `
 nnoremap ` '
 
 " Preserve indentation while pasting text from the OS X clipboard
-noremap <leader>pt :set paste<CR>:put  *<CR>:set nopaste<CR>
+noremap <leader>pt :set paste<CR>:put  +<CR>:set nopaste<CR>
