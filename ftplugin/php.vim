@@ -18,7 +18,7 @@ syntax sync maxlines=240
 set synmaxcol=800
 
 
-let b:ale_fixers = {'php': ['hackfmt', 'php_cs_fixer','phpcbf']}
+let b:ale_fixers = {'php': ['phpcbf']}
 let g:ale_php_phpcbf_standard = 'Drupal'
 " let g:ale_php_phpcs_standard = get(g:, 'ale_php_phpcs_standard', '')
 let g:ale_php_phpcs_standard = 'Drupal'
