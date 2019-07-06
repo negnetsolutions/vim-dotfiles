@@ -12,6 +12,12 @@ set omnifunc=syntaxcomplete#Complete
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
-" let g:asyncomplete_auto_popup = 1
 
 set wildignorecase
+
+" For deoplete.
+if has('nvim')
+  let g:deoplete#enable_at_startup = 1
+  inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
+  inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
+endif
