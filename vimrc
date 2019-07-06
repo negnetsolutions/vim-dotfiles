@@ -72,7 +72,8 @@ Plug 'mattn/emmet-vim'
 
 " Theme
 if(exists('+termguicolors'))
-  Plug 'trevordmiller/nova-vim'
+  " Plug 'trevordmiller/nova-vim'
+  Plug 'KeitaNakamura/neodark.vim'
   Plug 'bling/vim-airline'
 else
   Plug 'skwp/vim-colors-solarized'

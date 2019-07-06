@@ -1,7 +1,8 @@
 set t_Co=256
 
 if( exists('+termguicolors'))
-  colorscheme nova
+  " colorscheme nova
+  colorscheme neodark
 else
   " SOLARIZED Settings
   colorscheme solarized
