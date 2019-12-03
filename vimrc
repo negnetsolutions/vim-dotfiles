@@ -65,7 +65,9 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " Git Helpers
 Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
 Plug 'mhinz/vim-signify'
+Plug 'will133/vim-dirdiff'
 
 "Window Managers
 Plug 'roman/golden-ratio'
