@@ -39,10 +39,6 @@ if has("python3") == 1 && v:version >= 800
   Plug 'Shougo/unite.vim'
   Plug 'Shougo/unite-outline'
   Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-else
-  Plug 'Shougo/unite.vim'
-  Plug 'Shougo/unite-outline'
-  Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 endif
 
 " UI
