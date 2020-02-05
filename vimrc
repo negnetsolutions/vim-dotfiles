@@ -69,15 +69,11 @@ Plug 'junegunn/gv.vim'
 Plug 'mhinz/vim-signify'
 Plug 'will133/vim-dirdiff'
 
-"Window Managers
-Plug 'roman/golden-ratio'
-
 " Other
 Plug 'mattn/emmet-vim'
 
 " Theme
 if(exists('+termguicolors'))
-  " Plug 'trevordmiller/nova-vim'
   Plug 'KeitaNakamura/neodark.vim'
   Plug 'bling/vim-airline'
 else
