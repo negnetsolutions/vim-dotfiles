@@ -51,11 +51,12 @@ Plug 'mkitt/tabline.vim'
 
 " Autocomplete
 Plug 'vim-scripts/AutoTag'
+" Plug 'zxqfl/tabnine-vim'
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
-  Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php'}
-  Plug 'kristijanhusak/deoplete-phpactor'
+  " Plug 'phpactor/phpactor', {'for': 'php', 'tag': '0.16.2', 'do': 'composer install --no-dev -o'}
+  " Plug 'kristijanhusak/deoplete-phpactor'
 endif
 
 
