@@ -34,8 +34,8 @@ if v:version > 740
   Plug 'w0rp/ale'
 endif
 
-if has("python3") == 1 && v:version >= 800
-  Plug 'Shougo/denite.nvim'
+if has("nvim")
+  Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
   Plug 'Shougo/unite.vim'
   Plug 'Shougo/unite-outline'
   Plug 'Shougo/vimproc.vim', { 'do': 'make' }
@@ -72,6 +72,9 @@ Plug 'will133/vim-dirdiff'
 
 " Other
 Plug 'mattn/emmet-vim'
+Plug 'junegunn/vim-peekaboo'
+" Plug 'gennaro-tedesco/nvim-peekup'
+
 
 " Theme
 if(exists('+termguicolors'))
