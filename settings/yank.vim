@@ -9,13 +9,6 @@ function! Yank(text) abort
   endif
 endfunction
 
-if has("unix")
-  let s:uname = system("echo -n \"$(uname)\"")
-  if !v:shell_error && s:uname == "Linux"
-    noremap <silent> <Leader>y y:<C-U>call Yank(@0)<CR>
-  endif
-endif
-
 " automatically run yank(1) whenever yanking in Vim
 " (this snippet was contributed by Larry Sanderson)
 function! CopyYank() abort
@@ -23,4 +16,11 @@ function! CopyYank() abort
     call Yank(join(v:event.regcontents, "\n"))
   endif
 endfunction
-autocmd TextYankPost * call CopyYank()
+
+if has("unix")
+  let s:uname = system("echo -n \"$(uname)\"")
+  if !v:shell_error && s:uname == "Linux"
+    noremap <silent> <Leader>y y:<C-U>call Yank(@0)<CR>
+    autocmd TextYankPost * call CopyYank()
+  endif
+endif
