@@ -8,7 +8,13 @@ function! Yank(text) abort
     call writefile([escape], '/dev/tty', 'b')
   endif
 endfunction
-noremap <silent> <Leader>y y:<C-U>call Yank(@0)<CR>
+
+if has("unix")
+  let s:uname = system("echo -n \"$(uname)\"")
+  if !v:shell_error && s:uname == "Linux"
+    noremap <silent> <Leader>y y:<C-U>call Yank(@0)<CR>
+  endif
+endif
 
 " automatically run yank(1) whenever yanking in Vim
 " (this snippet was contributed by Larry Sanderson)
