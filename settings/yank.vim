@@ -22,5 +22,7 @@ if has("unix")
   if !v:shell_error && s:uname == "Linux"
     noremap <silent> <Leader>y y:<C-U>call Yank(@0)<CR>
     autocmd TextYankPost * call CopyYank()
+  elseif !v:shell_error && s:uname == "Darwin"
+    noremap <silent> <Leader>y "*y
   endif
 endif
