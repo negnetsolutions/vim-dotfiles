@@ -51,14 +51,10 @@ Plug 'mkitt/tabline.vim'
 
 " Autocomplete
 Plug 'vim-scripts/AutoTag'
-" Plug 'zxqfl/tabnine-vim'
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
-  " Plug 'phpactor/phpactor', {'for': 'php', 'tag': '0.16.2', 'do': 'composer install --no-dev -o'}
-  " Plug 'kristijanhusak/deoplete-phpactor'
-endif
-
+" if has('nvim')
+"   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"   Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+" endif
 
 " Tmux
 Plug 'tmux-plugins/vim-tmux-focus-events'
@@ -73,8 +69,6 @@ Plug 'will133/vim-dirdiff'
 " Other
 Plug 'mattn/emmet-vim'
 Plug 'junegunn/vim-peekaboo'
-" Plug 'gennaro-tedesco/nvim-peekup'
-
 
 " Theme
 if(exists('+termguicolors'))
@@ -84,7 +78,22 @@ else
   Plug 'skwp/vim-colors-solarized'
 endif
 
+" COC Code Completion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'yaegassy/coc-intelephense', {'do': 'yarn install --frozen-lockfile'}
+
 call plug#end()
 
 " Initialize Settings
 runtime! settings/**.vim
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
