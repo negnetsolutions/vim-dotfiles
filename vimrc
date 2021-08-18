@@ -16,10 +16,6 @@ Plug 'tomtom/tcomment_vim'
 " Search
 Plug 'rking/ag.vim'
 
-if has('nvim')
-  Plug 'machakann/vim-highlightedyank'
-endif
-
 " Language
 Plug 'stanangeloff/php.vim'
 Plug 'Raimondi/delimitMate' "auto-closing
@@ -39,10 +35,10 @@ if has("nvim")
   Plug 'Shougo/unite.vim'
   Plug 'Shougo/unite-outline'
   Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+  Plug 'Shougo/neomru.vim'
 endif
 
 " UI
-Plug 'Shougo/neomru.vim'
 Plug 'sickill/vim-pasta'
 Plug 'zakj/vim-showmarks'
 
@@ -51,6 +47,11 @@ Plug 'mkitt/tabline.vim'
 
 " Autocomplete
 Plug 'vim-scripts/AutoTag'
+if has("nvim")
+  " COC Code Completion
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'yaegassy/coc-intelephense', {'do': 'yarn install --frozen-lockfile'}
+endif
 
 " Tmux
 Plug 'tmux-plugins/vim-tmux-focus-events'
@@ -62,9 +63,14 @@ Plug 'junegunn/gv.vim'
 Plug 'mhinz/vim-signify'
 Plug 'will133/vim-dirdiff'
 
-" Other
+" Text Expansion
 Plug 'mattn/emmet-vim'
-Plug 'junegunn/vim-peekaboo'
+
+" Register maintenance
+if has('nvim')
+  Plug 'junegunn/vim-peekaboo'
+  Plug 'machakann/vim-highlightedyank'
+endif
 
 " Theme
 if(exists('+termguicolors'))
@@ -73,10 +79,6 @@ if(exists('+termguicolors'))
 else
   Plug 'skwp/vim-colors-solarized'
 endif
-
-" COC Code Completion
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'yaegassy/coc-intelephense', {'do': 'yarn install --frozen-lockfile'}
 
 call plug#end()
 
