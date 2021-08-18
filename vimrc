@@ -51,10 +51,6 @@ Plug 'mkitt/tabline.vim'
 
 " Autocomplete
 Plug 'vim-scripts/AutoTag'
-" if has('nvim')
-"   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"   Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
-" endif
 
 " Tmux
 Plug 'tmux-plugins/vim-tmux-focus-events'
