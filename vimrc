@@ -46,6 +46,9 @@ if has("nvim")
   Plug 'neoclide/coc-tabnine', {'do': 'yarn install --frozen-lockfile'}
 endif
 
+" Motion
+Plug 'justinmk/vim-sneak'
+
 " Tmux
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'christoomey/vim-tmux-navigator'
