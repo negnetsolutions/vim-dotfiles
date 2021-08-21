@@ -1,8 +1,8 @@
 set t_Co=256
 
 if( exists('+termguicolors'))
-  " colorscheme nova
-  colorscheme neodark
+  colorscheme nightfox
+  let g:lightline = {'colorscheme': 'nightfox'}
 else
   " SOLARIZED Settings
   colorscheme solarized

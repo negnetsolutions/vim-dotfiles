@@ -30,14 +30,6 @@ if v:version > 740
   Plug 'w0rp/ale'
 endif
 
-if has("nvim")
-  Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
-  Plug 'Shougo/unite.vim'
-  Plug 'Shougo/unite-outline'
-  Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-  Plug 'Shougo/neomru.vim'
-endif
-
 " UI
 Plug 'sickill/vim-pasta'
 Plug 'zakj/vim-showmarks'
@@ -51,6 +43,7 @@ if has("nvim")
   " COC Code Completion
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'yaegassy/coc-intelephense', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc-tabnine', {'do': 'yarn install --frozen-lockfile'}
 endif
 
 " Tmux
@@ -72,10 +65,24 @@ if has('nvim')
   Plug 'machakann/vim-highlightedyank'
 endif
 
+" Indent Highlighters
+if has('nvim')
+  Plug 'lukas-reineke/indent-blankline.nvim'
+endif
+
+" Telescope
+if has('nvim')
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+endif
+
 " Theme
 if(exists('+termguicolors'))
-  Plug 'KeitaNakamura/neodark.vim'
-  Plug 'bling/vim-airline'
+  " Main Theme
+  Plug 'EdenEast/nightfox.nvim'
+
+  " Status Bar
+  Plug 'itchyny/lightline.vim'
 else
   Plug 'skwp/vim-colors-solarized'
 endif
