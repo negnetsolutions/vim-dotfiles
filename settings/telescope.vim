@@ -6,7 +6,7 @@ if has('nvim')
   lua << EOF
   require('telescope').setup{
     defaults = {
-      file_ignore_patterns = { "node_modules/*", "vendor/*", ".git/*" },
+      file_ignore_patterns = { "node_modules/*", "vendor/*" },
       initial_mode = "normal",
     }
   }
