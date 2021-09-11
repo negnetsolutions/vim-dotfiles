@@ -75,9 +75,9 @@ endif
 
 " Telescope
 if has('nvim')
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'fannheyward/telescope-coc.nvim'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
+  Plug 'fannheyward/telescope-coc.nvim'
 endif
 
 " Theme
