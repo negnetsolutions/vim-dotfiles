@@ -56,8 +56,8 @@ Plug 'christoomey/vim-tmux-navigator'
 " Git Helpers
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
-Plug 'mhinz/vim-signify'
 Plug 'will133/vim-dirdiff'
+Plug 'mhinz/vim-signify'
 
 " Text Expansion
 Plug 'mattn/emmet-vim'
@@ -84,6 +84,8 @@ endif
 if(exists('+termguicolors'))
   " Main Theme
   Plug 'EdenEast/nightfox.nvim'
+  Plug 'kyazdani42/nvim-web-devicons'
+  Plug 'yamatsum/nvim-nonicons'
 
   " Status Bar
   Plug 'itchyny/lightline.vim'

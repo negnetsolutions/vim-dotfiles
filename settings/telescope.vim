@@ -11,13 +11,17 @@ if has('nvim')
   require('telescope').setup{
     defaults = {
       file_ignore_patterns = { "node_modules/*", "vendor/*" },
-      initial_mode = "normal",
+      initial_mode = "insert",
       },
     pickers = {
+      find_files = {
+        theme = "ivy",
+      },
       buffers = {
         show_all_buffers = true,
         ignore_current_buffer = true,
         sort_lastused = true,
+        previewer = false,
         mappings = {
           i = {
             ["<c-d>"] = "delete_buffer",

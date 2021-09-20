@@ -9,10 +9,17 @@ if has('nvim')
   " Change vim dir to term pwd.
   tnoremap <C-A> pwd\| tmux loadb -<CR><C-\><C-n>:cd <C-r>+<CR>i
 
-  augroup nvim_terminal | au!
+  augroup nvim_terminal
+    autocmd!
     " switching to terminal window/buffer
-    autocmd BufWinEnter,WinEnter term://* startinsert
+    autocmd BufWinEnter,WinEnter term://*  startinsert
     " back to normal mode when leaving term
     autocmd BufLeave term://* stopinsert
-  augroup end
+  augroup END
+
+  " augroup Telescope
+  "   autocmd!
+  "   autocmd FileType TelescopePrompt :let g:toggle_term_insert = 0
+  " augroup END
+
 endif
