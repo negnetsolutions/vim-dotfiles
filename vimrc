@@ -83,7 +83,7 @@ endif
 " Theme
 if(exists('+termguicolors'))
   " Main Theme
-  Plug 'EdenEast/nightfox.nvim'
+  Plug 'EdenEast/nightfox.nvim', {'tag': 'v1.0.0'}
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'yamatsum/nvim-nonicons'
 
