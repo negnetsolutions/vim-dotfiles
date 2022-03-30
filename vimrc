@@ -75,6 +75,7 @@ endif
 " Indent Highlighters
 if has('nvim')
   Plug 'lukas-reineke/indent-blankline.nvim'
+  Plug 'RRethy/vim-illuminate'
 endif
 
 " Telescope
@@ -86,13 +87,19 @@ endif
 
 " Theme
 if(exists('+termguicolors'))
-  " Main Theme
-  Plug 'EdenEast/nightfox.nvim', {'tag': 'v1.0.0'}
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'yamatsum/nvim-nonicons'
 
   " Status Bar
-  Plug 'itchyny/lightline.vim'
+  if has('nvim')
+    " Main Theme
+    " Plug 'EdenEast/nightfox.nvim', {'tag': 'v1.0.0'}
+    Plug 'EdenEast/nightfox.nvim'
+    Plug 'nvim-lualine/lualine.nvim'
+  else
+    Plug 'skwp/vim-colors-solarized'
+    Plug 'itchyny/lightline.vim'
+  endif
 else
   Plug 'skwp/vim-colors-solarized'
 endif
