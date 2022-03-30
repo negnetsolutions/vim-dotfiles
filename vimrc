@@ -47,7 +47,11 @@ if has("nvim")
 endif
 
 " Motion
-Plug 'justinmk/vim-sneak'
+if has('nvim')
+  Plug 'ggandor/lightspeed.nvim'
+else
+  Plug 'justinmk/vim-sneak'
+endif
 
 " Tmux
 Plug 'tmux-plugins/vim-tmux-focus-events'

@@ -1,3 +1,8 @@
-let g:sneak#label = 1
-map f <Plug>Sneak_s
-map F <Plug>Sneak_S
+if has('nvim')
+  map f <Plug>Lightspeed_s
+  map F <Plug>Lightspeed_S
+else
+  let g:sneak#label = 1
+  map f <Plug>Sneak_s
+  map F <Plug>Sneak_S
+endif
