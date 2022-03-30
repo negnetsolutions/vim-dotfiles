@@ -93,7 +93,6 @@ if(exists('+termguicolors'))
   " Status Bar
   if has('nvim')
     " Main Theme
-    " Plug 'EdenEast/nightfox.nvim', {'tag': 'v1.0.0'}
     Plug 'EdenEast/nightfox.nvim'
     Plug 'nvim-lualine/lualine.nvim'
   else
