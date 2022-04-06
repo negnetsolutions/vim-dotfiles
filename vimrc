@@ -26,7 +26,10 @@ Plug 'othree/html5.vim'
 Plug 'hail2u/vim-css3-syntax'
 
 " Linting
-if v:version > 740
+if has('nvim')
+  Plug 'jose-elias-alvarez/null-ls.nvim'
+  Plug 'folke/trouble.nvim'
+elseif v:version > 740
   Plug 'w0rp/ale'
 endif
 
