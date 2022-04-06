@@ -2,6 +2,7 @@ if has('nvim')
   " Map Telescope Keys
   nmap ,be :Telescope buffers<CR>
   nmap ,f :Telescope find_files<CR>
+  nmap ,bd :Telescope diagnostics<CR>
 
   " Use Telescope for doc symbols.
   nmap ,t :Telescope coc document_symbols<CR>
