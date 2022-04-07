@@ -91,7 +91,6 @@ endif
 " Theme
 if(exists('+termguicolors'))
   Plug 'kyazdani42/nvim-web-devicons'
-  Plug 'yamatsum/nvim-nonicons'
 
   " Status Bar
   if has('nvim')
