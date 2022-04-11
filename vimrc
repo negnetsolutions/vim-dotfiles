@@ -71,7 +71,7 @@ Plug 'mattn/emmet-vim'
 
 " Register maintenance
 if has('nvim')
-  Plug 'junegunn/vim-peekaboo'
+  " Plug 'junegunn/vim-peekaboo'
   Plug 'machakann/vim-highlightedyank'
 endif
 
