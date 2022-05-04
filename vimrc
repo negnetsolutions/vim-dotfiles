@@ -85,6 +85,7 @@ endif
 if has('nvim')
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
+  Plug 'nvim-treesitter/nvim-treesitter'
   Plug 'fannheyward/telescope-coc.nvim'
 endif
 
