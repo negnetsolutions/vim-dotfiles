@@ -65,6 +65,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 Plug 'will133/vim-dirdiff'
 Plug 'mhinz/vim-signify'
+if has('nvim')
+  Plug 'TimUntersberger/neogit'
+  Plug 'sindrets/diffview.nvim'
+endif
 
 " Text Expansion
 Plug 'mattn/emmet-vim'
