@@ -12,8 +12,8 @@ require("null-ls").setup({
     },
 })
  require("trouble").setup {
-    auto_close = false,
-    auto_open = true
+    auto_close = true,
+    auto_open = false
   }
 EOF
 
