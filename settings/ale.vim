@@ -12,15 +12,22 @@ require("null-ls").setup({
     },
 })
  require("trouble").setup {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
+    auto_close = false,
+    auto_open = true
   }
+EOF
+
+lua << EOF
+vim.diagnostic.config({
+    virtual_text = false,
+    underline = true,
+    signs = true
+})
 EOF
 
 map <leader>xx <cmd>TroubleToggle<cr>
 nmap ,bt <cmd>TroubleToggle<CR>
 
-command ALEFix execute 'lua vim.lsp.buf.formatting()'
+command ALEFix execute 'lua vim.lsp.buf.format { async = true }'
 
 endif
