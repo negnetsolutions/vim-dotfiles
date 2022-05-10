@@ -10,14 +10,14 @@ let php_sql_heredoc = 0 "Disable php in heredoc"
 let php_sql_nowdoc = 0 "Disable php in nowdoc"
 let php_sql_query = 0 "Disable sql highlight in php"
 
-setlocal foldmethod=indent
-setlocal omnifunc=phpcomplete#CompletePHP
+" setlocal foldmethod=indent
+" setlocal omnifunc=phpcomplete#CompletePHP
 
 syntax sync minlines=100
 syntax sync maxlines=240
 set synmaxcol=800
 
+set cindent
 
 let b:ale_fixers = {'php': ['phpcbf']}
-" let g:ale_php_phpcs_standard = 'Drupal'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'

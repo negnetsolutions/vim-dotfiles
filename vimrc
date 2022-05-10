@@ -2,6 +2,8 @@ set nocompatible
 set encoding=utf-8 " Necessary to show Unicode glyphs
 filetype off
 
+set number
+
 call plug#begin('~/.vim/plugged')
 
 " Text manipulation
@@ -17,13 +19,18 @@ Plug 'tomtom/tcomment_vim'
 Plug 'rking/ag.vim'
 
 " Language
-Plug 'stanangeloff/php.vim'
-Plug 'Raimondi/delimitMate' "auto-closing
-Plug 'lumiliet/vim-twig'
-Plug 'chr4/nginx.vim' "nginx syntax
+if has('nvim')
+  Plug 'nvim-treesitter/nvim-treesitter'
+else
+  Plug 'stanangeloff/php.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'othree/html5.vim'
 Plug 'hail2u/vim-css3-syntax'
+endif
+
+Plug 'Raimondi/delimitMate' "auto-closing
+Plug 'lumiliet/vim-twig'
+Plug 'chr4/nginx.vim' "nginx syntax
 
 " Linting
 if has('nvim')
@@ -65,6 +72,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 Plug 'will133/vim-dirdiff'
 Plug 'mhinz/vim-signify'
+Plug 'jreybert/vimagit'
 if has('nvim')
   Plug 'TimUntersberger/neogit'
   Plug 'sindrets/diffview.nvim'
@@ -75,7 +83,6 @@ Plug 'mattn/emmet-vim'
 
 " Register maintenance
 if has('nvim')
-  " Plug 'junegunn/vim-peekaboo'
   Plug 'machakann/vim-highlightedyank'
 endif
 
@@ -89,7 +96,6 @@ endif
 if has('nvim')
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
-  Plug 'nvim-treesitter/nvim-treesitter'
   Plug 'fannheyward/telescope-coc.nvim'
 endif
 
