@@ -23,9 +23,9 @@ if has('nvim')
   Plug 'nvim-treesitter/nvim-treesitter'
 else
   Plug 'stanangeloff/php.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'othree/html5.vim'
-Plug 'hail2u/vim-css3-syntax'
+  Plug 'pangloss/vim-javascript'
+  Plug 'othree/html5.vim'
+  Plug 'hail2u/vim-css3-syntax'
 endif
 
 Plug 'Raimondi/delimitMate' "auto-closing
