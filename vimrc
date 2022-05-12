@@ -33,6 +33,8 @@ Plug 'lumiliet/vim-twig'
 Plug 'chr4/nginx.vim' "nginx syntax
 
 " Linting
+Plug 'editorconfig/editorconfig-vim'
+
 if has('nvim')
   Plug 'jose-elias-alvarez/null-ls.nvim'
   Plug 'folke/trouble.nvim'
