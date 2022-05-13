@@ -13,7 +13,14 @@ Plug 'b4winckler/vim-angry'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'tomtom/tcomment_vim'
+
+" Commenting
+if has('nvim')
+  Plug 'terrortylor/nvim-comment'
+  Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+else
+  Plug 'tomtom/tcomment_vim'
+endif
 
 " Search
 Plug 'rking/ag.vim'
