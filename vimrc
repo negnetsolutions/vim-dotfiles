@@ -36,6 +36,7 @@ else
 endif
 
 Plug 'Raimondi/delimitMate' "auto-closing
+
 Plug 'lumiliet/vim-twig'
 Plug 'chr4/nginx.vim' "nginx syntax
 
@@ -57,7 +58,7 @@ Plug 'zakj/vim-showmarks'
 Plug 'mkitt/tabline.vim'
 
 " Autocomplete
-Plug 'vim-scripts/AutoTag'
+" Plug 'vim-scripts/AutoTag'
 if has("nvim")
   " COC Code Completion
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
