@@ -3,3 +3,5 @@
 bundle/**
 plugged/**
 autoload/plug.vim.old
+old*
+plugin/*
