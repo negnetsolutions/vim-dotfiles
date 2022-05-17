@@ -100,6 +100,8 @@ return require("packer").startup(function(use)
     })
 
     -- Language
+    use({ "lumiliet/vim-twig" })
+
     use({
       "nvim-treesitter/nvim-treesitter",
       config = function()
