@@ -90,6 +90,7 @@ return require("packer").startup(function(use)
     })
     use({
       "JoosepAlviste/nvim-ts-context-commentstring",
+      requires = { 'nvim-treesitter/nvim-treesitter' },
       config = function()
         require'nvim-treesitter.configs'.setup {
           context_commentstring = {
@@ -104,6 +105,7 @@ return require("packer").startup(function(use)
 
     use({
       "nvim-treesitter/nvim-treesitter",
+      run = ':TSUpdate',
       config = function()
         require'nvim-treesitter.configs'.setup {
           -- A list of parser names, or "all"
@@ -127,11 +129,22 @@ return require("packer").startup(function(use)
             additional_vim_regex_highlighting = false,
           },
         }
+      -- Folding
+      vim.o.foldmethod = "expr"
+      vim.o.foldexpr = "nvim_treesitter#foldexpr()"
       end
     })
 
     -- Autoclosing
-    use({ "Raimondi/delimitMate" })
+    use({
+      "windwp/nvim-autopairs",
+      config = function()
+        require('nvim-autopairs').setup({
+          disable_filetype = { "TelescopePrompt" , "vim" },
+        })
+      end,
+      event = "InsertCharPre",
+    })
 
     -- Linting.
     use({ "editorconfig/editorconfig-vim" })
@@ -176,7 +189,6 @@ return require("packer").startup(function(use)
     use({ "junegunn/gv.vim" })
     use({ "will133/vim-dirdiff" })
     use({ "mhinz/vim-signify" })
-    use({ "jreybert/vimagit" })
 
     -- Text Expansion
     use({ "mattn/emmet-vim" })
@@ -198,42 +210,41 @@ return require("packer").startup(function(use)
     })
     use({ "RRethy/vim-illuminate" })
     use({ "kyazdani42/nvim-web-devicons" })
+
+    -- Theme.
     use({
-	    "EdenEast/nightfox.nvim",
-	    config = function()
-		    require('nightfox').setup({
-			    options = {
-				    -- Compiled file's destination location
-				    compile_path = vim.fn.stdpath("cache") .. "/nightfox",
-				    compile_file_suffix = "_compiled", -- Compiled file suffix
-				    transparent = false,    -- Disable setting background
-				    terminal_colors = true, -- Set terminal colors (vim.g.terminal_color_*) used in `:terminal`
-				    dim_inactive = true,   -- Non focused panes set to alternative background
-				    styles = {              -- Style to be applied to different syntax groups
-				    comments = "NONE",    -- Value is any valid attr-list value `:help attr-list`
-				    conditionals = "NONE",
-				    constants = "NONE",
-				    functions = "NONE",
-				    keywords = "NONE",
-				    numbers = "NONE",
-				    operators = "NONE",
-				    strings = "NONE",
-				    types = "NONE",
-				    variables = "NONE",
-			    },
-			    inverse = {             -- Inverse highlight for different types
-			    match_paren = false,
-			    visual = false,
-			    search = false,
-		    },
-		    modules = {             -- List of various plugins and additional options
-		    -- ...
-	    },
-    }
-})
-	    vim.cmd("colorscheme nightfox")
-	    end
-    })
+      "EdenEast/nightfox.nvim",
+      config = function()
+        require('nightfox').setup({
+          options = {
+            -- Compiled file's destination location
+            compile_path = vim.fn.stdpath("cache") .. "/nightfox",
+            compile_file_suffix = "_compiled", -- Compiled file suffix
+            transparent = false,    -- Disable setting background
+            terminal_colors = true, -- Set terminal colors (vim.g.terminal_color_*) used in `:terminal`
+            dim_inactive = true,   -- Non focused panes set to alternative background
+            styles = {              -- Style to be applied to different syntax groups
+              comments = "NONE",    -- Value is any valid attr-list value `:help attr-list`
+              conditionals = "NONE",
+              constants = "NONE",
+              functions = "NONE",
+              keywords = "NONE",
+              numbers = "NONE",
+              operators = "NONE",
+              strings = "NONE",
+              types = "NONE",
+              variables = "NONE",
+            },
+            inverse = {             -- Inverse highlight for different types
+              match_paren = false,
+              visual = false,
+              search = false,
+            },
+          }
+        })
+        vim.cmd("colorscheme nightfox")
+        end
+      })
 
     -- Status Line
     use({
@@ -276,6 +287,7 @@ return require("packer").startup(function(use)
     use {
       'neoclide/coc.nvim',
       branch = 'release',
+      run = ':CocUpdate',
       config = function()
         vim.cmd("let g:coc_user_config = {}")
         vim.cmd("let g:coc_user_config['coc.preferences.jumpCommand'] = ':drop'")
@@ -290,4 +302,7 @@ return require("packer").startup(function(use)
     use({ "tmux-plugins/vim-tmux-focus-events" })
     use({ "christoomey/vim-tmux-navigator" })
 
+    if packer_bootstrap then
+      require('packer').sync()
+    end
 end)

@@ -120,3 +120,5 @@ nmap ,bd :Telescope diagnostics<CR>
 " Use Telescope for doc symbols.
 nmap ,t :Telescope coc document_symbols<CR>
 
+nnoremap / /\v
+vnoremap / /\v

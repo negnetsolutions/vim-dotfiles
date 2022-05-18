@@ -1,4 +1,4 @@
-require("impatient")
+-- require("impatient")
 
 -- Plugins
 require("plugins")

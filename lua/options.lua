@@ -10,7 +10,7 @@ vim.o.hidden = true
 vim.o.updatetime = 100
 vim.o.wildignorecase = true
 vim.o.inccommand="nosplit"
-vim.o.mouse=a
+vim.o.mouse="a"
 vim.o.ttyfast=true
 vim.o.lazyredraw=true
 vim.o.laststatus=2
@@ -19,13 +19,22 @@ vim.o.title = true
 
 -- Completion
 vim.o.wildmode="list:longest"
-
 vim.o.wildmenu = true
 vim.o.wildignore="*.o,*.obj,*~"
 
 --Enable omni completion.
 vim.o.completeopt="longest,menuone"
 vim.o.omnifunc="syntaxcomplete#Complete"
+
+vim.keymap.set('i', '<Tab>', function()
+    return vim.fn.pumvisible() == 1 and '<C-N>' or '<Tab>'
+end, {expr = true})
+vim.keymap.set('i', '<S-Tab>', function()
+    return vim.fn.pumvisible() == 1 and '<C-p>' or '<S-Tab>'
+end, {expr = true})
+vim.keymap.set('i', '<cr>', function()
+    return vim.fn.pumvisible() == 1 and '<C-y>' or '<cr>'
+end, {expr = true})
 
 -- SEARCH
 vim.o.incsearch = true
@@ -50,11 +59,13 @@ vim.o.shiftwidth=2
 vim.o.softtabstop=2
 vim.o.tabstop=2
 vim.o.expandtab = true
--- vim.o.list listchars=tab:\ \ ,trail:·
+vim.o.listchars = "tab:|.,trail:_,extends:>,precedes:<,nbsp:~,eol:¬"
 vim.o.wrap = true
 vim.o.linebreak = true
 
 -- Folds
+vim.api.nvim_set_keymap('v', '<Space>',  'za', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Space>',  'za', { noremap = true, silent = true })
 vim.o.foldmethod="indent"
 vim.o.foldnestmax=3
 vim.o.foldlevelstart=20
@@ -75,3 +86,6 @@ vim.g.netrw_preview=1
 vim.g.netrw_winsize=20
 vim.g.netrw_hide=1
 vim.g.netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
+
+-- FASTER ESC
+vim.api.nvim_set_keymap('i', 'jj',  '<ESC>', { noremap = true, silent = true })
