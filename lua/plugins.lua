@@ -118,6 +118,8 @@ return require("packer").startup(function(use)
             enable = true
           },
 
+          incremental_selection = { enable = true },
+
           highlight = {
             -- `false` will disable the whole extension
             enable = true,
