@@ -206,112 +206,17 @@ return require("packer").startup(function(use)
     use({ "RRethy/vim-illuminate" })
     use({ "kyazdani42/nvim-web-devicons" })
 
-    -- use({
-    --   'williamboman/nvim-lsp-installer',
-    --   config = function ()
-    --     require("nvim-lsp-installer").setup {
-    --       ensure_installed = { "intelephense", "sumneko_lua" }
-    --     }
-    --
-    --   end
-    -- })
-    --
-    -- use({
-    --   'neovim/nvim-lspconfig',
-    --   requires = {
-    --     'williamboman/nvim-lsp-installer',
-    --   },
-    --   config = function ()
-    --
-          -- vim.cmd("nmap ,t :Telescope lsp_document_symbols<CR>")
-    --     -- Mappings.
-    --     -- See `:help vim.diagnostic.*` for documentation on any of the below functions
-    --     local opts = { noremap=true, silent=true }
-    --     vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
-    --     vim.api.nvim_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
-    --     vim.api.nvim_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
-    --
-    --     -- Use an on_attach function to only map the following keys
-    --     -- after the language server attaches to the current buffer
-    --     local on_attach = function(client, bufnr)
-    --       -- Enable completion triggered by <c-x><c-o>
-    --       vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-    --
-    --       -- Mappings.
-    --       -- See `:help vim.lsp.*` for documentation on any of the below functions
-    --       vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-    --       vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-    --       vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
-    --       vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-    --       vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-    --       vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
-    --       vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-    --       vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-    --       vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-    --     end
-    --
-    --     local diagnostics = function()
-    --       local sign = function(opts)
-    --         vim.fn.sign_define(opts.name, {
-    --           texthl = opts.name,
-    --           text = opts.text,
-    --           numhl = ''
-    --         })
-    --       end
-    --
-    --       local icon = {
-    --         error = '✘',
-    --         warn = '▲',
-    --         hint = '⚑',
-    --         info = ''
-    --       }
-    --
-    --       sign({name = 'DiagnosticSignError', text = icon.error})
-    --       sign({name = 'DiagnosticSignWarn', text = icon.warn})
-    --       sign({name = 'DiagnosticSignHint', text = icon.hint})
-    --       sign({name = 'DiagnosticSignInfo', text = icon.info})
-    --
-    --       vim.diagnostic.config({
-    --         virtual_text = false,
-    --         signs = true,
-    --         update_in_insert = false,
-    --         underline = true,
-    --         severity_sort = true,
-    --         float = {
-    --           focusable = false,
-    --           style = 'minimal',
-    --           border = 'rounded',
-    --           source = 'always',
-    --           header = '',
-    --           prefix = '',
-    --         },
-    --       })
-    --     end
-    --
-    --     -- Set diagnostics.
-    --     diagnostics()
-    --
-    --     -- Use a loop to conveniently call 'setup' on multiple servers and
-    --     -- map buffer local keybindings when the language server attaches
-    --     local servers = { 'intelephense', 'sumneko_lua' }
-    --     for _, lsp in pairs(servers) do
-    --       require('lspconfig')[lsp].setup {
-    --         on_attach = on_attach,
-    --         flags = {
-    --           -- This will be the default in neovim 0.7+
-    --           debounce_text_changes = 150,
-    --         }
-    --       }
-    --     end
-    --
-    --   end
-    -- })
-
     -- use {
     --   'tzachar/cmp-tabnine',
     --   run = './install.sh',
     --   requires = 'hrsh7th/nvim-cmp'
     -- }
+
+    use {
+      "lazytanuki/nvim-mapper",
+      config = function() require("nvim-mapper").setup{} end,
+      before = "telescope.nvim"
+    }
 
     use {
       'VonHeikemen/lsp-zero.nvim',
@@ -336,8 +241,143 @@ return require("packer").startup(function(use)
         local lsp = require('lsp-zero')
     
         lsp.preset('recommended')
+        lsp.set_preferences({
+          manage_nvim_cmp = false
+        })
         lsp.setup()
         vim.cmd("nmap ,t :Telescope lsp_document_symbols<CR>")
+
+        local cmp = require('cmp')
+
+        vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
+
+        local cmp_select_opts = {behavior = cmp.SelectBehavior.Select}
+        local util = {}
+
+        local luasnip = require('luasnip')
+
+        luasnip.config.set_config({
+          region_check_events = 'InsertEnter',
+          delete_check_events = 'InsertLeave'
+        })
+
+        require('luasnip.loaders.from_vscode').load()
+
+        util.check_back_space = function()
+          local col = vim.fn.col('.') - 1
+          if col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
+            return true
+          else
+            return false
+          end
+        end
+
+
+        local cmp_config = {
+          completion = {
+            completeopt = 'menu,menuone,noinsert'
+          },
+          snippet = {
+            expand = function(args)
+              luasnip.lsp_expand(args.body)
+            end,
+          }, 
+          sources = {
+            {name = 'path'},
+            {name = 'nvim_lsp', keyword_length = 3},
+            {name = 'buffer', keyword_length = 3},
+            {name = 'luasnip', keyword_length = 2},
+          },
+          window = {
+            documentation = vim.tbl_deep_extend(
+              'force',
+              cmp.config.window.bordered(),
+              {
+                max_height = 15,
+                max_width = 60,
+              }
+            )
+          },
+          formatting = {
+            fields = {'abbr', 'menu', 'kind'},
+            format = function(entry, item)
+              local short_name = {
+                nvim_lsp = 'LSP',
+                nvim_lua = 'nvim'
+              }
+
+              local menu_name = short_name[entry.source.name] or entry.source.name
+
+              item.menu = string.format('[%s]', menu_name)
+              return item
+            end,
+          },
+          mapping = {
+            -- confirm selection
+            ['<C-y>'] = cmp.mapping.confirm({select = true}),
+
+            -- navigate items on the list
+            ['<Up>'] = cmp.mapping.select_prev_item(cmp_select_opts),
+            ['<Down>'] = cmp.mapping.select_next_item(cmp_select_opts),
+
+            -- scroll up and down in the completion documentation
+            ['<C-f>'] = cmp.mapping.scroll_docs(5),
+            ['<C-u>'] = cmp.mapping.scroll_docs(-5),
+
+            -- toggle completion
+            ['<C-e>'] = cmp.mapping(function(fallback)
+              if cmp.visible() then
+                cmp.close()
+                fallback()
+              else
+                cmp.complete()
+              end
+            end),
+
+            -- go to next placeholder in the snippet
+            ['<C-d>'] = cmp.mapping(function(fallback)
+              if luasnip.jumpable(1) then
+                luasnip.jump(1)
+              else
+                fallback()
+              end
+            end, {'i', 's'}),
+
+            -- go to previous placeholder in the snippet
+            ['<C-b>'] = cmp.mapping(function(fallback)
+              if luasnip.jumpable(-1) then
+                luasnip.jump(-1)
+              else
+                fallback()
+              end
+            end, {'i', 's'}),
+
+            -- when menu is visible, navigate to next item
+            -- when line is empty, insert a tab character
+            -- else, activate completion
+            ['<Tab>'] = cmp.mapping(function(fallback)
+              if cmp.visible() then
+                cmp.select_next_item(cmp_select_opts)
+              elseif util.check_back_space() then
+                fallback()
+              else
+                cmp.complete()
+              end
+            end, {'i', 's'}),
+
+            -- when menu is visible, navigate to previous item on list
+            -- else, revert to default behavior
+            ['<S-Tab>'] = cmp.mapping(function(fallback)
+              if cmp.visible() then
+                cmp.select_prev_item(cmp_select_opts)
+              else
+                fallback()
+              end
+            end, {'i', 's'}),
+          }
+        }
+
+        cmp.setup(cmp_config)
       end
     }
 
