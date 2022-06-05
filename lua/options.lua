@@ -1,80 +1,67 @@
-vim.o.number = true
-vim.o.relativenumber = true
-vim.o.backspace="indent,eol,start"
-vim.o.history=1000
-vim.o.showcmd = true
-vim.o.showmode = true
-vim.o.gcr="a:blinkon0"
-vim.o.autoread = true
-vim.o.hidden = true
-vim.o.updatetime = 100
-vim.o.wildignorecase = true
-vim.o.inccommand="nosplit"
-vim.o.mouse="a"
-vim.o.ttyfast=true
-vim.o.lazyredraw=true
-vim.o.laststatus=2
-vim.o.modelines=0
-vim.o.title = true
+local options = {
+  number = true,
+  relativenumber = true,
+  backspace="indent,eol,start",
+  history=1000,
+  showcmd = true,
+  showmode = true,
+  gcr="a:blinkon0",
+  autoread = true,
+  hidden = true,
+  updatetime = 100,
+  wildignorecase = true,
+  inccommand="nosplit",
+  mouse="a",
+  ttyfast=true,
+  lazyredraw=true,
+  laststatus=2,
+  modelines=0,
+  title = true,
+  -- Completion
+  wildmode="list:longest",
+  wildmenu = true,
+  wildignore="*.o,*.obj,*~",
+  --Enable omni completion.
+  completeopt={'menu', 'menuone', 'noselect'},
+  -- SEARCH
+  incsearch = true,
+  hlsearch = true,
+  viminfo="'100,f1",
+  ignorecase = true,
+  smartcase = true,
+  showmatch = true,
+  gdefault = true,
+  -- Turn off swap
+  swapfile = false,
+  -- Indentation
+  autoindent = true,
+  smartindent = true,
+  smarttab = true,
+  shiftwidth=2,
+  softtabstop=2,
+  tabstop=2,
+  expandtab = true,
+  listchars = "tab:|.,trail:_,extends:>,precedes:<,nbsp:~,eol:¬",
+  wrap = true,
+  linebreak = true,
+  -- Folds
+  foldmethod="indent",
+  foldnestmax=3,
+  foldlevelstart=20,
+  foldenable = true,
+  -- SCROLLING
+  scrolloff=8,
+  sidescrolloff=15,
+  sidescroll=1,
+}
 
--- Completion
-vim.o.wildmode="list:longest"
-vim.o.wildmenu = true
-vim.o.wildignore="*.o,*.obj,*~"
+for k, v in pairs(options) do
+  vim.opt[k] = v
+end
 
---Enable omni completion.
-vim.o.completeopt="longest,menuone"
-vim.o.omnifunc="syntaxcomplete#Complete"
-
-vim.keymap.set('i', '<Tab>', function()
-    return vim.fn.pumvisible() == 1 and '<C-N>' or '<Tab>'
-end, {expr = true})
-vim.keymap.set('i', '<S-Tab>', function()
-    return vim.fn.pumvisible() == 1 and '<C-p>' or '<S-Tab>'
-end, {expr = true})
-vim.keymap.set('i', '<cr>', function()
-    return vim.fn.pumvisible() == 1 and '<C-y>' or '<cr>'
-end, {expr = true})
-
--- SEARCH
-vim.o.incsearch = true
-vim.o.hlsearch = true
-vim.o.viminfo="'100,f1"
-vim.o.ignorecase = true
-vim.o.smartcase = true
-vim.o.showmatch = true
-vim.o.gdefault = true
-
--- Turn off swap
-vim.o.swapfile = false
 vim.noswapfile = true
 vim.nobackup = true
 vim.nowb = true
-
--- Indentation
-vim.o.autoindent = true
-vim.o.smartindent = true
-vim.o.smarttab = true
-vim.o.shiftwidth=2
-vim.o.softtabstop=2
-vim.o.tabstop=2
-vim.o.expandtab = true
-vim.o.listchars = "tab:|.,trail:_,extends:>,precedes:<,nbsp:~,eol:¬"
-vim.o.wrap = true
-vim.o.linebreak = true
-
--- Folds
-vim.api.nvim_set_keymap('v', '<Space>',  'za', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Space>',  'za', { noremap = true, silent = true })
-vim.o.foldmethod="indent"
-vim.o.foldnestmax=3
-vim.o.foldlevelstart=20
-vim.o.foldenable = true
-
--- SCROLLING
-vim.o.scrolloff=8
-vim.o.sidescrolloff=15
-vim.o.sidescroll=1
 
 -- NETRW
 vim.g.netrw_sort_by="name"
@@ -86,6 +73,3 @@ vim.g.netrw_preview=1
 vim.g.netrw_winsize=20
 vim.g.netrw_hide=1
 vim.g.netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
-
--- FASTER ESC
-vim.api.nvim_set_keymap('i', 'jj',  '<ESC>', { noremap = true, silent = true })

@@ -18,7 +18,7 @@ end
 vim.cmd([[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
   augroup end
 ]])
 
@@ -70,6 +70,11 @@ return require("packer").startup(function(use)
             }
           }
         }
+
+        
+        vim.api.nvim_set_keymap('n', ',br', ':Telescope buffers<CR>', { noremap = true, silent = true })
+        vim.api.nvim_set_keymap('n', ',f', ':Telescope find_files<CR>', { noremap = true, silent = true })
+        vim.api.nvim_set_keymap('n', ',bd', ':Telescope diagnostics<CR>', { noremap = true, silent = true })
       end
     })
 
@@ -83,6 +88,8 @@ return require("packer").startup(function(use)
           create_mappings = true,
           comment_empty = true
         })
+        vim.api.nvim_set_keymap('n', '<leader>/', ':CommentToggle<CR>', { noremap = true, silent = true })
+        vim.api.nvim_set_keymap('v', '<leader>/', ':CommentToggle<CR>', { noremap = true, silent = true })
       end
     })
     use({
@@ -206,16 +213,25 @@ return require("packer").startup(function(use)
     use({ "RRethy/vim-illuminate" })
     use({ "kyazdani42/nvim-web-devicons" })
 
-    -- use {
-    --   'tzachar/cmp-tabnine',
-    --   run = './install.sh',
-    --   requires = 'hrsh7th/nvim-cmp'
-    -- }
-
     use {
-      "lazytanuki/nvim-mapper",
-      config = function() require("nvim-mapper").setup{} end,
-      before = "telescope.nvim"
+      'tzachar/cmp-tabnine',
+      run = './install.sh',
+      requires = 'hrsh7th/nvim-cmp',
+      config = function()
+        local tabnine = require('cmp_tabnine.config')
+        tabnine:setup({
+          max_lines = 1000;
+          max_num_results = 20;
+          sort = true;
+          run_on_every_keystroke = true;
+          snippet_placeholder = '..';
+          ignored_file_types = { -- default is not to ignore
+            -- uncomment to ignore in lua:
+            -- lua = true
+          };
+          show_prediction_strength = false;
+        })
+      end
     }
 
     use {
@@ -241,143 +257,43 @@ return require("packer").startup(function(use)
         local lsp = require('lsp-zero')
     
         lsp.preset('recommended')
+
         lsp.set_preferences({
-          manage_nvim_cmp = false
-        })
-        lsp.setup()
-        vim.cmd("nmap ,t :Telescope lsp_document_symbols<CR>")
-
-        local cmp = require('cmp')
-
-        vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
-
-        local cmp_select_opts = {behavior = cmp.SelectBehavior.Select}
-        local util = {}
-
-        local luasnip = require('luasnip')
-
-        luasnip.config.set_config({
-          region_check_events = 'InsertEnter',
-          delete_check_events = 'InsertLeave'
+          manage_nvim_cmp = false,
+          set_lsp_keymaps = false
         })
 
-        require('luasnip.loaders.from_vscode').load()
-
-        util.check_back_space = function()
-          local col = vim.fn.col('.') - 1
-          if col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
-            return true
-          else
-            return false
+        lsp.on_attach(function(client, bufnr)
+          local fmt = function(cmd) return function(str) return cmd:format(str) end end
+          local map = function(m, lhs, rhs)
+            local opts = {noremap = true, silent = true}
+            vim.api.nvim_buf_set_keymap(bufnr, m, lhs, rhs, opts)
           end
-        end
 
+          local lsp = fmt('<cmd>lua vim.lsp.%s<cr>')
+          local diagnostic = fmt('<cmd>lua vim.diagnostic.%s<cr>')
 
-        local cmp_config = {
-          completion = {
-            completeopt = 'menu,menuone,noinsert'
-          },
-          snippet = {
-            expand = function(args)
-              luasnip.lsp_expand(args.body)
-            end,
-          }, 
-          sources = {
-            {name = 'path'},
-            {name = 'nvim_lsp', keyword_length = 3},
-            {name = 'buffer', keyword_length = 3},
-            {name = 'luasnip', keyword_length = 2},
-          },
-          window = {
-            documentation = vim.tbl_deep_extend(
-              'force',
-              cmp.config.window.bordered(),
-              {
-                max_height = 15,
-                max_width = 60,
-              }
-            )
-          },
-          formatting = {
-            fields = {'abbr', 'menu', 'kind'},
-            format = function(entry, item)
-              local short_name = {
-                nvim_lsp = 'LSP',
-                nvim_lua = 'nvim'
-              }
+          map('n', 'K', lsp 'buf.hover()')
+          map('n', 'gd', lsp 'buf.definition()')
+          map('n', 'gD', lsp 'buf.declaration()')
+          map('n', 'gi', lsp 'buf.implementation()')
+          map('n', 'go', lsp 'buf.type_definition()')
+          map('n', 'gr', lsp 'buf.references()')
+          map('n', '<F2>', lsp 'buf.rename()')
+          map('n', '<F4>', lsp 'buf.code_action()')
+          map('x', '<F4>', lsp 'buf.range_code_action()')
 
-              local menu_name = short_name[entry.source.name] or entry.source.name
+          map('n', 'gl', diagnostic 'open_float()')
+          map('n', '[d', diagnostic 'goto_prev()')
+          map('n', ']d', diagnostic 'goto_next()')
+        
+        end)
 
-              item.menu = string.format('[%s]', menu_name)
-              return item
-            end,
-          },
-          mapping = {
-            -- confirm selection
-            ['<C-y>'] = cmp.mapping.confirm({select = true}),
-
-            -- navigate items on the list
-            ['<Up>'] = cmp.mapping.select_prev_item(cmp_select_opts),
-            ['<Down>'] = cmp.mapping.select_next_item(cmp_select_opts),
-
-            -- scroll up and down in the completion documentation
-            ['<C-f>'] = cmp.mapping.scroll_docs(5),
-            ['<C-u>'] = cmp.mapping.scroll_docs(-5),
-
-            -- toggle completion
-            ['<C-e>'] = cmp.mapping(function(fallback)
-              if cmp.visible() then
-                cmp.close()
-                fallback()
-              else
-                cmp.complete()
-              end
-            end),
-
-            -- go to next placeholder in the snippet
-            ['<C-d>'] = cmp.mapping(function(fallback)
-              if luasnip.jumpable(1) then
-                luasnip.jump(1)
-              else
-                fallback()
-              end
-            end, {'i', 's'}),
-
-            -- go to previous placeholder in the snippet
-            ['<C-b>'] = cmp.mapping(function(fallback)
-              if luasnip.jumpable(-1) then
-                luasnip.jump(-1)
-              else
-                fallback()
-              end
-            end, {'i', 's'}),
-
-            -- when menu is visible, navigate to next item
-            -- when line is empty, insert a tab character
-            -- else, activate completion
-            ['<Tab>'] = cmp.mapping(function(fallback)
-              if cmp.visible() then
-                cmp.select_next_item(cmp_select_opts)
-              elseif util.check_back_space() then
-                fallback()
-              else
-                cmp.complete()
-              end
-            end, {'i', 's'}),
-
-            -- when menu is visible, navigate to previous item on list
-            -- else, revert to default behavior
-            ['<S-Tab>'] = cmp.mapping(function(fallback)
-              if cmp.visible() then
-                cmp.select_prev_item(cmp_select_opts)
-              else
-                fallback()
-              end
-            end, {'i', 's'}),
-          }
-        }
-
-        cmp.setup(cmp_config)
+        lsp.setup()
+    
+        vim.api.nvim_set_keymap('n', ',t', ':Telescope lsp_document_symbols<CR>', { noremap = true, silent = true })
+    
+        require('cmp_config')
       end
     }
 
@@ -452,29 +368,6 @@ return require("packer").startup(function(use)
       end
     })
 
-
-    -- Autocomplete
-    -- use {
-    --   'neoclide/coc.nvim',
-    --   requires = {
-    --     "fannheyward/telescope-coc.nvim"
-    --   },
-    --   branch = 'release',
-    --   run = ':CocUpdate',
-    --   config = function()
-    --     require('telescope').load_extension('coc')
-    --
-    --     vim.cmd("nmap <silent> gd <Plug>(coc-definition)")
-    --     vim.cmd("nmap <silent> gr <Plug>(coc-references)")
-    --     vim.cmd("nmap ,t :Telescope coc document_symbols<CR>")
-    --     vim.cmd("let g:coc_user_config = {}")
-    --     vim.cmd("let g:coc_user_config['coc.preferences.jumpCommand'] = ':drop'")
-    --     vim.cmd("autocmd CursorHold * silent call CocActionAsync('highlight')")
-    --   end
-    -- }
-    -- use {'yaegassy/coc-intelephense', run = 'yarn install --frozen-lockfile'}
-    -- use {'neoclide/coc-tabnine', run = 'yarn install --frozen-lockfile'}
-    
 
     -- Tmux
     use({ "tmux-plugins/vim-tmux-focus-events" })
