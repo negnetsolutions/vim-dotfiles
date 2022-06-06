@@ -32,6 +32,7 @@ return require("packer").startup(function(use)
     -- Text manipulation
     use({ "tpope/vim-surround" })
     use({ "tpope/vim-repeat" })
+    use({ "godlygeek/tabular" })
     use({
       "sickill/vim-pasta",
       config = function()
