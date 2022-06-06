@@ -122,6 +122,9 @@ return require("packer").startup(function(use)
             enable = true
           },
 
+          autopairs = {
+            enable = true,
+          },
           incremental_selection = { enable = true },
           textobjects = { enable = true },
 
@@ -148,6 +151,7 @@ return require("packer").startup(function(use)
       config = function()
         require('nvim-autopairs').setup({
           disable_filetype = { "TelescopePrompt" , "vim" },
+          check_ts = true,
         })
       end,
       event = "InsertCharPre",
@@ -190,7 +194,55 @@ return require("packer").startup(function(use)
     use({ "tpope/vim-fugitive" })
     use({ "junegunn/gv.vim" })
     use({ "will133/vim-dirdiff" })
-    use({ "mhinz/vim-signify" })
+
+    use {
+      'lewis6991/gitsigns.nvim',
+      config = function()
+        require('gitsigns').setup {
+          signs = {
+            add = { hl = "GitSignsAdd", text = "▎", numhl = "GitSignsAddNr", linehl = "GitSignsAddLn" },
+            change = { hl = "GitSignsChange", text = "▎", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
+            delete = { hl = "GitSignsDelete", text = "契", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
+            topdelete = { hl = "GitSignsDelete", text = "契", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
+            changedelete = { hl = "GitSignsChange", text = "▎", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
+          },
+          signcolumn = true, -- Toggle with `:Gitsigns toggle_signs`
+          numhl = true, -- Toggle with `:Gitsigns toggle_numhl`
+          linehl = false, -- Toggle with `:Gitsigns toggle_linehl`
+          word_diff = false, -- Toggle with `:Gitsigns toggle_word_diff`
+          watch_gitdir = {
+            interval = 1000,
+            follow_files = true,
+          },
+          attach_to_untracked = true,
+          current_line_blame = false, -- Toggle with `:Gitsigns toggle_current_line_blame`
+          current_line_blame_opts = {
+            virt_text = true,
+            virt_text_pos = "eol", -- 'eol' | 'overlay' | 'right_align'
+            delay = 1000,
+            ignore_whitespace = false,
+          },
+          current_line_blame_formatter_opts = {
+            relative_time = false,
+          },
+          sign_priority = 6,
+          update_debounce = 100,
+          status_formatter = nil, -- Use default
+          max_file_length = 40000,
+          preview_config = {
+            -- Options passed to nvim_open_win
+            border = "single",
+            style = "minimal",
+            relative = "cursor",
+            row = 0,
+            col = 1,
+          },
+          yadm = {
+            enable = false,
+          },
+        }
+      end
+    }
 
     -- Text Expansion
     use({ "mattn/emmet-vim" })
@@ -203,6 +255,7 @@ return require("packer").startup(function(use)
     use({
       "lukas-reineke/indent-blankline.nvim",
       config = function()
+        vim.g.indent_blankline_use_treesitter = true
         require("indent_blankline").setup {
           space_char_blankline = " ",
           show_current_context = true,
