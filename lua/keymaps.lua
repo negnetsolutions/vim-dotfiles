@@ -1,12 +1,9 @@
 local opts = { noremap = true, silent = true }
 
-local term_opts = { silent = true }
-
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
 --Remap space as leader key
--- keymap("", ",,", "<Nop>", opts)
 vim.g.mapleader = ","
 vim.g.maplocalleader = "\\"
 
@@ -52,7 +49,6 @@ keymap('n', '<Space>',  'za', { noremap = true, silent = true })
 
 -- FASTER ESC
 keymap('i', 'jj',  '<ESC>', { noremap = true, silent = true })
-
 
 vim.keymap.set('i', '<Tab>', function()
     return vim.fn.pumvisible() == 1 and '<C-N>' or '<Tab>'
