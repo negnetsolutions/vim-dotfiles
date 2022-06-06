@@ -119,7 +119,8 @@ return require("packer").startup(function(use)
           sync_install = false,
 
           indent = {
-            enable = true
+            enable = true,
+            disable = { "css", "scss", "lua" }
           },
 
           autopairs = {
