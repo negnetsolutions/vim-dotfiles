@@ -72,7 +72,7 @@ return require("packer").startup(function(use)
         }
 
         
-        vim.api.nvim_set_keymap('n', ',br', ':Telescope buffers<CR>', { noremap = true, silent = true })
+        vim.api.nvim_set_keymap('n', ',be', ':Telescope buffers<CR>', { noremap = true, silent = true })
         vim.api.nvim_set_keymap('n', ',f', ':Telescope find_files<CR>', { noremap = true, silent = true })
         vim.api.nvim_set_keymap('n', ',bd', ':Telescope diagnostics<CR>', { noremap = true, silent = true })
       end
