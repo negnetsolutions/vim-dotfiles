@@ -42,6 +42,12 @@ return require("packer").startup(function(use)
 
     -- Telescope
     use({ "nvim-lua/plenary.nvim" })
+    use({ 
+      "kelly-lin/telescope-ag",
+      requires = { 
+        "nvim-telescope/telescope.nvim"
+      }
+    })
 
     use({
       "nvim-telescope/telescope.nvim",
