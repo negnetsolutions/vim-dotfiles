@@ -301,6 +301,7 @@ return require("packer").startup(function(use)
         -- LSP Support
         {'neovim/nvim-lspconfig'},
         {'williamboman/nvim-lsp-installer'},
+        {'SmiteshP/nvim-navic'},
     
         -- Autocompletion
         {'hrsh7th/nvim-cmp'},
@@ -316,6 +317,7 @@ return require("packer").startup(function(use)
       },
       config = function()
         local lsp = require('lsp-zero')
+        local navic = require("nvim-navic")
     
         lsp.preset('recommended')
 
@@ -325,6 +327,9 @@ return require("packer").startup(function(use)
         })
 
         lsp.on_attach(function(client, bufnr)
+
+          navic.attach(client, bufnr)
+
           local fmt = function(cmd) return function(str) return cmd:format(str) end end
           local map = function(m, lhs, rhs)
             local opts = {noremap = true, silent = true}
@@ -397,6 +402,7 @@ return require("packer").startup(function(use)
     use({
       "nvim-lualine/lualine.nvim",
       config = function()
+        local navic = require("nvim-navic")
         require('lualine').setup {
           options = {
             icons_enabled = true,
@@ -410,7 +416,9 @@ return require("packer").startup(function(use)
           sections = {
             lualine_a = {'mode'},
             lualine_b = {'branch', 'diff', 'diagnostics'},
-            lualine_c = {'filename'},
+            lualine_c = {
+              'filename', { navic.get_location, cond = navic.is_available },
+            },
             lualine_x = {'encoding', 'fileformat', 'filetype'},
             lualine_y = {'progress'},
             lualine_z = {'location'}
