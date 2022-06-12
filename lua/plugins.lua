@@ -339,7 +339,21 @@ return require("packer").startup(function(use)
 
         lsp.on_attach(function(client, bufnr)
 
-          navic.attach(client, bufnr)
+          local function has_value (tab, val)
+            for index, value in ipairs(tab) do
+              if value == val then
+                return true
+              end
+            end
+
+            return false
+          end
+
+          local skipNavicLsps = { "ltex", "cssls", "eslint", "html" }
+
+          if has_value(skipNavicLsps, client.name) == false then
+            navic.attach(client, bufnr)
+          end
 
           local fmt = function(cmd) return function(str) return cmd:format(str) end end
           local map = function(m, lhs, rhs)
