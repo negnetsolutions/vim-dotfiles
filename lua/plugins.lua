@@ -93,22 +93,19 @@ return require("packer").startup(function(use)
       config = function()
         require('nvim_comment').setup({
           create_mappings = true,
-          comment_empty = true
+          comment_empty = true,
+          hook = function()
+            require("ts_context_commentstring.internal").update_commentstring()
+          end,
         })
         vim.api.nvim_set_keymap('n', '<leader>/', ':CommentToggle<CR>', { noremap = true, silent = true })
         vim.api.nvim_set_keymap('v', '<leader>/', ':CommentToggle<CR>', { noremap = true, silent = true })
       end
     })
+
     use({
       "JoosepAlviste/nvim-ts-context-commentstring",
       requires = { 'nvim-treesitter/nvim-treesitter' },
-      config = function()
-        require'nvim-treesitter.configs'.setup {
-          context_commentstring = {
-            enable = true
-          }
-        }
-      end
     })
 
     -- Language
@@ -146,6 +143,11 @@ return require("packer").startup(function(use)
           },
           incremental_selection = { enable = true },
           textobjects = { enable = true },
+
+          context_commentstring = {
+            enable = true,
+            enable_autocmd = false,
+          },
 
           highlight = {
             -- `false` will disable the whole extension
