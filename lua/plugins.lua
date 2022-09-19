@@ -132,6 +132,8 @@ return require("packer").startup(function(use)
         vim.o.winminwidth = 10
         vim.o.equalalways = false
         require('windows').setup()
+
+        vim.keymap.set('n', '<C-w>z', '<Cmd>WindowsMaximize<CR>')
       end
     }
 
