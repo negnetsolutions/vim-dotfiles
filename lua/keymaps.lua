@@ -49,13 +49,3 @@ keymap('n', '<Space>',  'za', { noremap = true, silent = true })
 
 -- FASTER ESC
 keymap('i', 'jj',  '<ESC>', { noremap = true, silent = true })
-
-vim.keymap.set('i', '<Tab>', function()
-    return vim.fn.pumvisible() == 1 and '<C-N>' or '<Tab>'
-end, {expr = true})
-vim.keymap.set('i', '<S-Tab>', function()
-    return vim.fn.pumvisible() == 1 and '<C-p>' or '<S-Tab>'
-end, {expr = true})
-vim.keymap.set('i', '<cr>', function()
-    return vim.fn.pumvisible() == 1 and '<C-y>' or '<cr>'
-end, {expr = true})
