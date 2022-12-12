@@ -203,7 +203,7 @@ return require("packer").startup(function(use)
 				    require("null-ls").builtins.completion.spell,
 				    require("null-ls").builtins.diagnostics.phpcs,
 				    require("null-ls").builtins.formatting.phpcbf,
-				    require("null-ls").builtins.diagnostics.stylelint,
+				    -- require("null-ls").builtins.diagnostics.stylelint,
 				    require("null-ls").builtins.formatting.prettier,
 			    },
 		    })
