@@ -1,5 +1,7 @@
 local cmp = require('cmp')
 local luasnip = require('luasnip')
+local compare = require('cmp.config.compare')
+local neogen = require('neogen')
 
 require("luasnip/loaders/from_vscode").lazy_load()
 
@@ -61,6 +63,8 @@ cmp.setup {
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
+      elseif neogen.jumpable() then
+        neogen.jump_next()
       elseif luasnip.expandable() then
         luasnip.expand()
       elseif luasnip.expand_or_jumpable() then
@@ -74,9 +78,21 @@ cmp.setup {
       "i",
       "s",
     }),
+    ["<Right>"] = cmp.mapping(function(fallback)
+        if neogen.jumpable() then
+          neogen.jump_next()
+        else 
+          fallback()
+        end
+      end, {
+        "i",
+        "s",
+      }),
     ["<S-Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
+      elseif neogen.jumpable(true) then
+        neogen.jump_prev()
       elseif luasnip.jumpable(-1) then
         luasnip.jump(-1)
       else
@@ -86,6 +102,20 @@ cmp.setup {
       "i",
       "s",
     }),
+  },
+  sorting = {
+    priority_weight = 2,
+    comparators = {
+      -- require('cmp_tabnine.compare'),
+      compare.offset,
+      compare.exact,
+      compare.score,
+      compare.recently_used,
+      compare.kind,
+      compare.sort_text,
+      compare.length,
+      compare.order,
+    },
   },
   formatting = {
     fields = { "kind", "abbr", "menu" },

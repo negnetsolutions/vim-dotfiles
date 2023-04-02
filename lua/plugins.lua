@@ -115,7 +115,10 @@ return require("packer").startup(function(use)
     use {
       "danymat/neogen",
       config = function()
-        require('neogen').setup { snippet_engine = "luasnip" }
+        require('neogen').setup { 
+          -- snippet_engine = "luasnip",
+          input_after_comment = true,
+        }
       end,
       requires = "nvim-treesitter/nvim-treesitter",
       -- Uncomment next line if you want to follow only stable versions
@@ -302,25 +305,41 @@ return require("packer").startup(function(use)
     use({ "kyazdani42/nvim-web-devicons" })
 
     use {
-      'tzachar/cmp-tabnine',
-      run = './install.sh',
-      requires = 'hrsh7th/nvim-cmp',
+      'codota/tabnine-nvim',
+      run = './dl_binaries.sh',
       config = function()
-        local tabnine = require('cmp_tabnine.config')
-        tabnine:setup({
-          max_lines = 1000;
-          max_num_results = 20;
-          sort = true;
-          run_on_every_keystroke = true;
-          snippet_placeholder = '..';
-          ignored_file_types = { -- default is not to ignore
-            -- uncomment to ignore in lua:
-            -- lua = true
-          };
-          show_prediction_strength = false;
+    
+        require('tabnine').setup({
+          disable_auto_comment=false,
+          accept_keymap="<C-n>",
+          dismiss_keymap = "<C-]>",
+          debounce_ms = 800,
+          suggestion_color = {gui = "#808080", cterm = 244},
+          exclude_filetypes = {"TelescopePrompt"}
         })
       end
     }
+
+    -- use {
+    --   'tzachar/cmp-tabnine',
+    --   run = './install.sh',
+    --   requires = 'hrsh7th/nvim-cmp',
+    --   config = function()
+    --     local tabnine = require('cmp_tabnine.config')
+    --     tabnine:setup({
+    --       max_lines = 1000;
+    --       max_num_results = 20;
+    --       sort = true;
+    --       run_on_every_keystroke = true;
+    --       snippet_placeholder = '..';
+    --       ignored_file_types = { -- default is not to ignore
+    --         -- uncomment to ignore in lua:
+    --         -- lua = true
+    --       };
+    --       show_prediction_strength = false;
+    --     })
+    --   end
+    -- }
 
     use {
       'VonHeikemen/lsp-zero.nvim',
@@ -461,7 +480,7 @@ return require("packer").startup(function(use)
             lualine_c = {
               'filename', { navic.get_location, cond = navic.is_available },
             },
-            lualine_x = {'encoding', 'fileformat', 'filetype'},
+            lualine_x = {'encoding', 'fileformat', 'filetype', 'tabnine'},
             lualine_y = {'progress'},
             lualine_z = {'location'}
           },
