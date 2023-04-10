@@ -40,14 +40,15 @@ return require("packer").startup(function(use)
       end
     })
 
+    use({ "Numkil/ag.nvim" })
     -- Telescope
     use({ "nvim-lua/plenary.nvim" })
-    use({ 
-      "kelly-lin/telescope-ag",
-      requires = { 
-        "nvim-telescope/telescope.nvim"
-      }
-    })
+    -- use({ 
+    --   "kelly-lin/telescope-ag",
+    --   requires = { 
+    --     "nvim-telescope/telescope.nvim"
+    --   }
+    -- })
 
     use({
       "nvim-telescope/telescope.nvim",
@@ -415,6 +416,16 @@ return require("packer").startup(function(use)
           map('n', ']d', diagnostic 'goto_next()')
         
         end)
+
+        require('lspconfig').intelephense.setup({
+          settings = {
+            intelephense = {
+              files = {
+                exclude = {"**/phpstan/resultCache.php", "**/.git/**","**/.svn/**","**/.hg/**","**/CVS/**","**/.DS_Store/**","**/node_modules/**","**/bower_components/**","**/vendor/**/{Tests,tests}/**","**/.history/**","**/vendor/**/vendor/**"}
+              },
+            };
+          }
+        })
 
         lsp.setup()
     
