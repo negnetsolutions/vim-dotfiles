@@ -49,3 +49,4 @@ keymap('n', '<Space>',  'za', { noremap = true, silent = true })
 
 -- FASTER ESC
 keymap('i', 'jj',  '<ESC>', { noremap = true, silent = true })
+

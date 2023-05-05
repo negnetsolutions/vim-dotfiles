@@ -390,6 +390,21 @@ return require("packer").startup(function(use)
 
         lsp.on_attach(function(client, bufnr)
 
+          if client.supports_method("textDocument/formatting") then	
+            vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+            vim.api.nvim_create_autocmd("BufWritePre", {
+              group = augroup,
+              buffer = bufnr,
+              callback = function()
+                vim.lsp.buf.format({
+                  filter = function(client) return client.name ~= "intelephense" end,
+                  bufnr = bufnr,
+                })
+              end,
+            })
+          end
+
+
           local function has_value (tab, val)
             for index, value in ipairs(tab) do
               if value == val then
@@ -428,7 +443,6 @@ return require("packer").startup(function(use)
           map('n', 'gl', diagnostic 'open_float()')
           map('n', '[d', diagnostic 'goto_prev()')
           map('n', ']d', diagnostic 'goto_next()')
-        
         end)
 
         require('lspconfig').intelephense.setup({
@@ -444,8 +458,9 @@ return require("packer").startup(function(use)
         lsp.setup()
     
         vim.api.nvim_set_keymap('n', ',t', ':Telescope lsp_document_symbols<CR>', { noremap = true, silent = true })
-    
+
         require('cmp_config')
+
       end
     }
 
