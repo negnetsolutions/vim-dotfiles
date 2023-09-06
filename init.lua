@@ -1,5 +1,3 @@
-require("impatient")
-
 -- Options
 require("options")
 vim.cmd("source ~/.config/nvim/viml/keymap.vim")
