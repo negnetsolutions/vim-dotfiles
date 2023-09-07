@@ -24,6 +24,18 @@ require("lazy").setup({
     config = function()
       -- Unless you are still migrating, remove the deprecated commands from v1.x
       vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
+
+      require("neo-tree").setup({
+        source_selector = {
+          winbar = false,
+          statusline = false
+        },
+        filesystem = {
+          hijack_netrw_behavior = "open_current",
+        }
+      })
+
+      vim.cmd([[nnoremap \ :Neotree reveal=true toggle<cr>]])
     end
   },
 
@@ -310,6 +322,13 @@ require("lazy").setup({
         exclude_filetypes = { "TelescopePrompt" },
         log_file_path = nil, -- absolute path to Tabnine log file
       })
+    end
+  },
+
+  {
+    'rcarriga/nvim-notify',
+    config = function()
+      vim.notify = require('notify')
     end
   },
 
