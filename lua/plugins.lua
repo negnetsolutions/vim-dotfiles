@@ -59,7 +59,7 @@ require("lazy").setup({
     config = function()
       require('telescope').setup {
         defaults = {
-          file_ignore_patterns = { "node_modules/*", "vendor/*" },
+          file_ignore_patterns = { "node_modules/*", "vendor/*", "react-dist/*" },
           initial_mode = "insert",
         },
         pickers = {
