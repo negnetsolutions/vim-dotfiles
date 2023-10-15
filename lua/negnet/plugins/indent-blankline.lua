@@ -4,7 +4,9 @@ return {
   opts = {},
   config = function()
     require("ibl").setup({
-      whitespace = { highlight = { "Whitespace", "NonText" } },
+      whitespace = {
+        highlight = { "Whitespace", "NonText" },
+      },
       scope = {
         enabled = true
       },
