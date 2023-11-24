@@ -1,4 +1,4 @@
-return  {
+return {
   "nvim-treesitter/nvim-treesitter",
   build = ':TSUpdate',
   config = function()
@@ -19,11 +19,6 @@ return  {
       },
       incremental_selection = { enable = true },
       textobjects = { enable = true },
-
-      context_commentstring = {
-        enable = true,
-        enable_autocmd = false,
-      },
 
       highlight = {
         -- `false` will disable the whole extension
