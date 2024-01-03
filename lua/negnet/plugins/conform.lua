@@ -19,10 +19,10 @@ return {
 				lua = { "stylua" },
 				php = { "phpcbf" },
 			},
-			format_on_save = {
+			format_after_save = {
 				lsp_fallback = true,
-				async = false,
-				timeout_ms = 500,
+				async = true,
+				timeout_ms = 2000,
 			},
 		})
 	end,
