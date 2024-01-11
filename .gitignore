@@ -1,7 +1,8 @@
-.DS_Store
-.netrwhist
-bundle/**
-plugged/**
-autoload/plug.vim.old
-old*
-plugin/*
+tt.*
+.tests
+doc/tags
+debug
+.repro
+foo.*
+*.log
+data

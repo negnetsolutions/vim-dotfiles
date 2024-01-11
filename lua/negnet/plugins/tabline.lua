@@ -1,3 +1,0 @@
-return {
-  "mkitt/tabline.vim"
-}
