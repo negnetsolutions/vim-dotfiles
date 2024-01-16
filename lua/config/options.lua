@@ -14,4 +14,6 @@ vim.g.netrw_winsize = 20
 vim.g.netrw_hide = 1
 vim.g.netrw_bufsettings = "noma nomod nu nobl nowrap ro"
 
+vim.opt.wrap = true
+
 vim.opt.clipboard = ""
