@@ -21,9 +21,11 @@ keymap("n", ";", ":", opts)
 keymap("n", "//", ":nohlsearch<CR>", opts)
 
 -- Folds
-keymap("v", "<Space>", "za", { noremap = true, silent = true })
-keymap("n", "<Space>", "za", { noremap = true, silent = true })
+keymap("v", "<Space>", "za", opts)
+keymap("n", "<Space>", "za", opts)
 
-keymap("n", "<leader>fs", ":Telescope lsp_document_symbols<CR>", { noremap = true, silent = true })
+keymap("n", "<leader>fs", ":Telescope lsp_document_symbols<CR>", opts)
+
+keymap("", "<leader>y", '"*y', opts)
 
 vim.keymap.del("n", "<leader>/")
