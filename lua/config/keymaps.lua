@@ -26,6 +26,6 @@ keymap("n", "<Space>", "za", opts)
 
 keymap("n", "<leader>fs", ":Telescope lsp_document_symbols<CR>", opts)
 
-keymap("", "<leader>y", '"*y', opts)
+keymap("", "<leader>y", '"+y', opts)
 
 vim.keymap.del("n", "<leader>/")
