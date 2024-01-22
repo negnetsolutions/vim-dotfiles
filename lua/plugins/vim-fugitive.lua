@@ -1,5 +1,6 @@
 return {
   "tpope/vim-fugitive",
+  event = "VeryLazy",
   config = function(_, opts)
     -- Shorten function name
     local keymap = vim.api.nvim_set_keymap
